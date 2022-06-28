@@ -1,0 +1,1 @@
+CREATE TABLE posts (pid SERIAL NOT NULL PRIMARY KEY, title VARCHAR (255) NOT NULL, description json NOT NULL);
