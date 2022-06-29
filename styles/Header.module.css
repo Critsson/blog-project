@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-direction: row;
+    padding: 23px 20px 40px;
+}
+.links_container {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction: row;
+    gap: 70px;
+    font-size: 23px;
+    margin-top: 21px;
+}

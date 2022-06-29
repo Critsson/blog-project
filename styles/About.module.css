@@ -1,0 +1,8 @@
+.test {
+    background-image: radial-gradient(#FFB69E 4%, transparent 6%),
+        radial-gradient( #FFB69E 4%, transparent 6%);
+    background-color: #ffeba9;
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    height: 100vh;
+}
