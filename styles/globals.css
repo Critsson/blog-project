@@ -15,3 +15,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.ce-block__content, 
+.ce-toolbar__content {
+ max-width: 50vw; 
+}

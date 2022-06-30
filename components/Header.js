@@ -7,8 +7,10 @@ import styles from "../styles/Header.module.css"
 export default function Header() {
     return (
         <div className={styles.container}>
-            <Image src={headerLogo} alt="Glorious Diaries Logo" width={450} height={100} />
-            <div className={styles.links_container} style={{marginRight: "400px"}}>
+            <Link href="/">
+                <Image className={styles.header_image} src={headerLogo} alt="Glorious Diaries Logo" width={450} height={100} />
+            </Link>
+            <div className={styles.links_container} style={{ marginRight: "400px" }}>
                 <Link href="/">
                     <a>Home</a>
                 </Link>
