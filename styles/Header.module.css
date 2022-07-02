@@ -19,6 +19,7 @@
 
 .logo_container {
     width: 22vw;
+    padding-left: 16px;
 }
 
 .header_logo:hover {

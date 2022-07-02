@@ -1,7 +1,7 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     font-family: "ABeeZee";
     background-color: #FFEBAD;
 }
@@ -62,4 +62,9 @@
 
 .connect_icon:hover {
     cursor: pointer;
+}
+
+.logo_footer {
+    margin-bottom: 118px;
+    margin-right: 400px;
 }
