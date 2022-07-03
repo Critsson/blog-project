@@ -3,7 +3,7 @@ import EditorJs from "@editorjs/editorjs"
 import Paragraph from "@editorjs/paragraph"
 import Header from "@editorjs/header"
 import List from "@editorjs/list"
-import Embed from "@editorjs/Embed"
+import Embed from "@editorjs/embed"
 const AlignmentTuneTool = require("editorjs-text-alignment-blocktune")
 
 export default function Editor(props) {
