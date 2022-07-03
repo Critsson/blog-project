@@ -1,7 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .banner {
@@ -18,11 +18,182 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
+  padding: 40px;
 }
 
-.center_banner > p {
+.text_container > p {
   font-family: "Bubbler One";
   font-size: 35px;
   margin-top: 30px;
+}
+
+.text_container {
+  display: flex;
+  gap: 5px;
+}
+
+.heart_emoji {
+  font-size: 40px !important;
+  color: #8D68AE;
+  line-height: 50px;
+}
+
+.ellipse_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap:10vw;
+}
+
+.ellipse1 {
+  background-image: url("/images/ellipse_1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position-y: 2px;
+  margin-top: 60px;
+}
+
+.ellipse1:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.ellipse2 {
+  background-image: url("/images/ellipse_2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position-y: 2px;
+  margin-bottom: 60px;
+}
+
+.ellipse2:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.ellipse3 {
+  background-image: url("/images/ellipse_3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position-y: 2px;
+  margin-bottom: 60px;
+}
+
+.ellipse3:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.ellipse4 {
+  background-image: url("/images/ellipse_4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 230px;
+  width: 230px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position-y:4px;
+  margin-top: 60px;
+}
+
+.ellipse4:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.ellipse_text {
+  font-family: "Alegreya SC";
+  font-size: 28px;
+  color: white;
+  font-weight: 500;
+}
+
+.email_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D39AF978;
+  margin-top: 45px;
+  width: 85vw;
+  margin-left: 7.5vw;
+  gap: 5vw;
+}
+
+.email_words_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alegreya SC";
+  height: 10rem;
+  gap:10px;
+}
+
+.email_words_container > i > h1 {
+  font-size: 150px;
+  font-weight: 400;
+  color: #00000080;
+}
+
+
+.email_smallwords_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.email_smallwords_container > i > h2 {
+  font-size: 33px;
+  font-weight: 400;
+  color: #00000080;
+  margin: 6px;
+}
+
+.email_input_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email_input_container > button {
+  background-color: #8D68AE;
+  border-color: transparent;
+  color: white;
+  font-family: "ABeeZee";
+  font-size: 30px;
+  height: 60px;
+  width: 170px;
+}
+
+.email_input_container > input {
+  height: 60px;
+  width: 30vw;
+  border-color: transparent;
+  font-size: 30px;
+  font-family: "ABeeZee";
+  padding-left: 20px;
 }
