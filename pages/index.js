@@ -5,10 +5,11 @@ import welcomeImage from "../public/images/welcome.svg"
 import styles from '../styles/Home.module.css'
 
 export default function Home({ posts }) {
+
   return (
     <div>
       <Head>
-        <title>Homepage</title>
+        <title>Home</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.container}>
@@ -62,12 +63,26 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:3000/api/blog/posts")
-  const data = await response.json()
+  const pool = require("../database/db.js")
+  const getAllBlogPosts = await pool.query("SELECT * FROM posts;")
+  const arrayLength = getAllBlogPosts.rows.length
+  const holder = [];
+
+  if (getAllBlogPosts.rows.length >= 4) {
+    for (let i = 0; i < 4; i++) {
+      holder.push(getAllBlogPosts.rows.pop())
+    }
+  } else {
+    for (let i = 0; i < arrayLength; i++) {
+      holder.push(getAllBlogPosts.rows.pop())
+    }
+  }
+
+  console.log(holder)
 
   return {
     props: {
-      posts: data
+      posts: holder
     }
   }
 }
