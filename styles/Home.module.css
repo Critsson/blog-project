@@ -202,6 +202,7 @@
 @media only screen and (max-width: 600px) {
   .banner {
     background-image: url("/images/circles_background.png");
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -15,7 +15,7 @@ export default function Home({ posts }) {
       <div className={styles.container}>
         <div className={styles.banner}>
           <div className={styles.center_banner}>
-            <Image src={welcomeImage} alt="Welcome to the Blog" width={350} height={100} />
+            <Image src={welcomeImage} alt="Welcome to the Blog" width={300} height={70} />
             <div className={styles.text_container}>
               <p>Whatever is your reason for stopping by, I hope you find what you&apos;re looking for and enjoy your stay</p>
               <p className={styles.heart_emoji}>♡</p>
