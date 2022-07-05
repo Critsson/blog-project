@@ -202,7 +202,6 @@
 @media only screen and (max-width: 600px) {
   .banner {
     background-image: url("/images/circles_background.png");
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,7 +326,7 @@
   
   .ellipse_text {
     font-family: "Alegreya SC";
-    font-size: 3.1vw;
+    font-size: 3.2vw;
     color: white;
     font-weight: 500;
   }
