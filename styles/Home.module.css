@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
 }
 
 .banner {
@@ -196,4 +197,150 @@
   font-size: 30px;
   font-family: "ABeeZee";
   padding-left: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    background-image: url("/images/circles_background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    width: 100%;
+  }
+  
+  .center_banner {
+    background-color: white;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width:100%;
+  }
+  
+  .text_container > p {
+    font-family: "Bubbler One";
+    font-size: 6vw;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .text_container {
+    display: flex;
+  }
+  
+  .heart_emoji {
+    display: none;
+  }
+  
+  .ellipse_container {
+    display: flex;
+    align-items: center;
+    justify-content: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .ellipse1 {
+    background-image: url("/images/ellipse_1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26.1vw;
+    width: 26.1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+    margin-top: 0px;
+  }
+  
+  .ellipse1:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .ellipse2 {
+    background-image: url("/images/ellipse_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26.1vw;
+    width: 26.1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+    margin-bottom:0px;
+  }
+  
+  .ellipse2:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .ellipse3 {
+    background-image: url("/images/ellipse_3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 26.1vw;
+    width: 26.1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+    margin-bottom: 0px;
+  }
+  
+  .ellipse3:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .ellipse4 {
+    background-image: url("/images/ellipse_4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 26.1vw;
+    width: 26.1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y:4px;
+    margin-top: 0px;
+  }
+  
+  .ellipse4:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  }
+  
+  .ellipse_text {
+    font-family: "Alegreya SC";
+    font-size: 3.3vw;
+    color: white;
+    font-weight: 500;
+  }
+
+  .email_container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction:row;
+    background-color: #D39AF978;
+    width: 100%;
+    margin-left: 0vw;
+    gap: 0vw;
+    margin-top: 45px;
+    margin-bottom: 45px;
+  }
 }

@@ -10,7 +10,7 @@ export default function Home({ posts }) {
     <div>
       <Head>
         <title>Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className={styles.container}>
         <div className={styles.banner}>
@@ -49,7 +49,7 @@ export default function Home({ posts }) {
             <i><h1>K</h1></i>
             <div className={styles.email_smallwords_container}>
               <i><h2>EEP UP WITH YOUR FAVORITE CATEGORIES</h2></i>
-              <i><h2>AND THE LATEST NEWS!</h2></i>
+              <i><h2 className={styles.email_smallwords}>AND THE LATEST NEWS!</h2></i>
             </div>
           </div>
           <div className={styles.email_input_container}>
@@ -65,24 +65,19 @@ export default function Home({ posts }) {
 export async function getStaticProps() {
   const pool = require("../database/db.js")
   const getAllBlogPosts = await pool.query("SELECT * FROM posts;")
-  const arrayLength = getAllBlogPosts.rows.length
-  const holder = [];
+  const postsArr = [];
 
   if (getAllBlogPosts.rows.length >= 4) {
     for (let i = 0; i < 4; i++) {
-      holder.push(getAllBlogPosts.rows.pop())
+      postsArr.push(getAllBlogPosts.rows.pop())
     }
   } else {
-    for (let i = 0; i < arrayLength; i++) {
-      holder.push(getAllBlogPosts.rows.pop())
-    }
+    getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
   }
-
-  console.log(holder)
 
   return {
     props: {
-      posts: holder
+      posts: postsArr
     }
   }
 }

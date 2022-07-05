@@ -56,3 +56,36 @@
     border-radius: 50%;
     background-color: rgba(128, 128, 128, 0.171);
 }
+
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: row;
+        width:100%;
+        padding: 10px;
+    }
+    .links_container {
+        display: flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: row;
+        font-family: "Bubbler One";
+        font-size: 7vw;
+        font-weight: 400;
+        gap: 30px;
+        margin: 15px;
+    }
+    .icon_container {
+        display: none;
+    }
+    .logo_container {
+       display: none;
+    }
+    .menu_arrow_container {
+        display: none;
+    }
+}
+
