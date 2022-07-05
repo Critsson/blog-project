@@ -62,22 +62,22 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
-  const pool = require("../database/db.js")
-  const getAllBlogPosts = await pool.query("SELECT * FROM posts;")
-  const postsArr = [];
+// export async function getStaticProps() {
+//   const pool = require("../database/db.js")
+//   const getAllBlogPosts = await pool.query("SELECT * FROM posts;")
+//   const postsArr = [];
 
-  if (getAllBlogPosts.rows.length >= 4) {
-    for (let i = 0; i < 4; i++) {
-      postsArr.push(getAllBlogPosts.rows.pop())
-    }
-  } else {
-    getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
-  }
+//   if (getAllBlogPosts.rows.length >= 4) {
+//     for (let i = 0; i < 4; i++) {
+//       postsArr.push(getAllBlogPosts.rows.pop())
+//     }
+//   } else {
+//     getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
+//   }
 
-  return {
-    props: {
-      posts: postsArr
-    }
-  }
-}
+//   return {
+//     props: {
+//       posts: postsArr
+//     }
+//   }
+// }
