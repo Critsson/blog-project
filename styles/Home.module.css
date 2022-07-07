@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 60px;
+  width: 100%;
 }
 
 .center_banner {
@@ -24,7 +25,7 @@
 
 .text_container > p {
   font-family: "Bubbler One";
-  font-size: 35px;
+  font-size: 2.2vw;
   margin-top: 30px;
 }
 
@@ -34,9 +35,9 @@
 }
 
 .heart_emoji {
-  font-size: 40px !important;
+  font-size: 2.5vw !important;
   color: #8D68AE;
-  line-height: 50px;
+  line-height: 3.3vw;
 }
 
 .ellipse_container {
@@ -51,8 +52,8 @@
   background-image: url("/images/ellipse_1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 230px;
-  width: 230px;
+  height: 14vw;
+  width: 14vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -71,8 +72,8 @@
   background-image: url("/images/ellipse_2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 230px;
-  width: 230px;
+  height: 14vw;
+  width: 14vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -91,8 +92,8 @@
   background-image: url("/images/ellipse_3.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 230px;
-  width: 230px;
+  height: 14vw;
+  width: 14vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -112,8 +113,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 230px;
-  width: 230px;
+  height: 14vw;
+  width: 14vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -130,73 +131,9 @@
 
 .ellipse_text {
   font-family: "Alegreya SC";
-  font-size: 28px;
+  font-size: 1.7vw;
   color: white;
   font-weight: 500;
-}
-
-.email_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #D39AF978;
-  margin-top: 45px;
-  width: 85vw;
-  margin-left: 7.5vw;
-  gap: 5vw;
-}
-
-.email_words_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Alegreya SC";
-  height: 10rem;
-  gap:10px;
-}
-
-.email_words_container > i > h1 {
-  font-size: 150px;
-  font-weight: 400;
-  color: #00000080;
-}
-
-
-.email_smallwords_container {
-  display: flex;
-  flex-direction: column;
-}
-
-.email_smallwords_container > i > h2 {
-  font-size: 33px;
-  font-weight: 400;
-  color: #00000080;
-  margin: 6px;
-}
-
-.email_input_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.email_input_container > button {
-  background-color: #8D68AE;
-  border-color: transparent;
-  color: white;
-  font-family: "ABeeZee";
-  font-size: 30px;
-  height: 60px;
-  width: 170px;
-}
-
-.email_input_container > input {
-  height: 60px;
-  width: 30vw;
-  border-color: transparent;
-  font-size: 30px;
-  font-family: "ABeeZee";
-  padding-left: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -331,16 +268,4 @@
     font-weight: 500;
   }
 
-  .email_container {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    flex-direction:row;
-    background-color: #D39AF978;
-    width: 100%;
-    margin-left: 0vw;
-    gap: 0vw;
-    margin-top: 45px;
-    margin-bottom: 45px;
-  }
 }
