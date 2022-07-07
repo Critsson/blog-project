@@ -13,7 +13,7 @@ export default function Footer() {
         <>
             <div className={styles.container}>
                 <div className={styles.logo_footer}>
-                    <Image src={logoFooter} alt="Glorious Diaries Footer Logo" width={470} height={100} />
+                    <Image src={logoFooter} alt="Glorious Diaries Footer Logo" width="410w" height="93vw" />
                 </div>
                 <div className={styles.navigate_container}>
                     <h1>navigate.</h1>
@@ -45,11 +45,11 @@ export default function Footer() {
                 <div className={styles.ama_container}>
                     <h1>ask me anything.</h1>
                     <div className={styles.ama_info}>
-                        <Image src={mailIcon} alt="Mail Icon" />
+                        <Image src={mailIcon} alt="Mail Icon" width="30vw" height="30vw" />
                         <h3>QandA@gloriousdiaries.com</h3>
                     </div>
                     <div className={styles.ama_info}>
-                        <Image src={phoneIcon} alt="Phone Icon" />
+                        <Image src={phoneIcon} alt="Phone Icon" width="30vw" height="30vw"/>
                         <h3>+1 (###) - ### - ####</h3>
                     </div>
                 </div>

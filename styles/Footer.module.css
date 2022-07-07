@@ -4,33 +4,34 @@
     justify-content: space-around;
     font-family: "ABeeZee";
     background-color: #FFEBAD;
+    width: 100%;
 }
 
 .container > div >  h1 {
     color: #8D68AE;
-    font-size: 30px;
+    font-size: 1.7vw;
     letter-spacing: -1.5px;
 }
 
 .navigate_container {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
 }
 
 .links_container {
     display: flex;
-    gap: 50px;
+    gap: 1vw;
     color: #D39AF9;
-    font-size: 13px;
+    font-size: .8vw;
     margin-top: -20px;
 }
 
 .ama_container {
-    margin-bottom: 123px;
+    margin-bottom: 0px;
 }
 
 .ama_container > h1 {
-    margin-bottom: 5px;
+    margin-bottom: .1vw;
 }
 
 .ama_info {
@@ -38,14 +39,14 @@
     align-items: center;
     gap: 20px;
     color:#D39AF9;
-    font-size: 18px;
-    margin-bottom: -25px;
+    font-size: 1.2vw;
+    margin-bottom: -2vw;
 }
 
 .connect_icons {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 2vw;
     margin-bottom: 135px;
     margin-right: 5vw;
 }
@@ -68,8 +69,8 @@
 }
 
 .logo_footer {
-    margin-bottom: 118px;
-    margin-right: 400px;
+    margin-bottom: 6vw;
+    margin-right: 0px;
 }
 
 @media only screen and (max-width: 600px) {
