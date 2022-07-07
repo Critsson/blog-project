@@ -24,8 +24,8 @@ export default function Header() {
                         <Link href="/blog">
                             <a>Blog</a>
                         </Link>
-                        <div className={styles.menu_arrow_container} style={{ paddingTop: "12px" }}>
-                            <Image src={menuArrow} alt="Menu Arrow" width={19} height={19} />
+                        <div className={styles.menu_arrow_container} style={{ paddingTop: ".6vw" }}>
+                            <Image src={menuArrow} alt="Menu Arrow" height="15vw" width="15vw"/>
                         </div>
                     </div>
                     <Link href="/about">

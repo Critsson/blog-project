@@ -74,6 +74,8 @@ export async function getStaticProps() {
   } else {
     getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
   }
+  
+  console.log(postsArr)
 
   return {
     props: {
