@@ -1,0 +1,97 @@
+.container {
+    background-color: #FFEBAD;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    gap: 10vw;
+}
+
+.logo_container {
+    width: 23vw;
+    margin-left: 1.6vw;
+    margin-top: 1vw;
+}
+
+.info_container {
+    display: flex;
+    gap: 5vw;
+}
+
+.title {
+    color: #8D68AE;
+    font-size: 2vw;
+    font-family: "ABeeZee";
+}
+
+.navigate_container > h1 {
+    margin-bottom: -.5vw;
+}
+
+.links_container {
+    display: flex;
+}
+
+.links_container > div > h3 {
+    font-size: 1.3vw;
+    font-family: "ABeeZee";
+    color:#D39AF9;
+    font-weight: normal;
+}
+
+.ama_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ama_container > h1 {
+    margin-bottom: .5vw;
+}
+
+.ama_info {
+    display: flex;
+    font-size: 1.4vw;
+    font-family: "ABeeZee";
+    color:#D39AF9;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: -1.3vw;
+}
+
+.ama_info > h3 {
+    font-weight: normal;
+}
+
+.ama_icon_container {
+    width: 2.5vw;
+    height: 2.5vw;
+}
+
+.connect_container > h1 {
+    margin-bottom: 1.5vw;
+}
+
+.connect_icons {
+    display: flex;
+    align-items: center;
+    gap: 1.6vw;
+}
+
+.ellipse {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #D39AF9;
+    height: 3vw;
+    width: 3vw;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2vw;
+    height: 2vw;
+}
