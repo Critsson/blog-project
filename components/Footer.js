@@ -51,7 +51,7 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className={styles.connect_container}>
-                        <h1 className={styles.title}>let's connect.</h1>
+                        <h1 className={styles.title}>let&apos;s connect.</h1>
                         <div className={styles.connect_icons}>
                             <div className={styles.ellipse}>
                                 <div className={styles.icon}>
