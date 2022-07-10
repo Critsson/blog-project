@@ -44,6 +44,11 @@ export default function Home({ posts }) {
             </div>
           </div>
         </div>
+        <div className={styles.email_container}>
+            <div className={styles.email_words_container}>
+                
+            </div>
+        </div>
       </div>
     </div>
   )
