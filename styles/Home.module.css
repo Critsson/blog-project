@@ -175,7 +175,6 @@
 
 .email_input_container {
   display: flex;
-  font-family: "ABeeZee";
 }
 
 .email_input_container > input {
@@ -184,6 +183,7 @@
   font-size: 1.5vw;
   border-color: transparent;
   padding-left: 1vw;
+  font-family: "ABeeZee";
 }
 
 .email_input_container > button {
@@ -194,6 +194,7 @@
   border-radius: 0;
   border-color: transparent;
   background-color: #8D68AE;
+  font-family: "ABeeZee";
 }
 
 

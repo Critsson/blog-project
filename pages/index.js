@@ -51,7 +51,7 @@ export default function Home({ posts }) {
             </div>
             <div className={styles.email_input_container}>
                 <input type="text" placeholder='Your email...'/>
-                <button>Let's go!</button>
+                <button>Let&apos;s go!</button>
             </div>
         </div>
       </div>
