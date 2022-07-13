@@ -45,14 +45,39 @@ export default function Home({ posts }) {
           </div>
         </div>
         <div className={styles.email_container}>
-            <div className={styles.email_words_container}>
-                <h1>K</h1>
-                <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
+          <div className={styles.email_words_container}>
+            <h1>K</h1>
+            <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
+          </div>
+          <div className={styles.email_input_container}>
+            <input type="text" placeholder='Your email...' />
+            <button>Let&apos;s go!</button>
+          </div>
+        </div>
+        <div className={styles.main_container}>
+          <div className={styles.posts_container}>
+            <div className={styles.latest_posts_title}>
+              <div></div>
+              <h2>LATEST POSTS</h2>
             </div>
-            <div className={styles.email_input_container}>
-                <input type="text" placeholder='Your email...'/>
-                <button>Let&apos;s go!</button>
+            <div className={styles.latest_post}>
+              <div className={styles.placeholder_image}></div>
+              <div className={styles.post_container}>
+                <div>
+                  <p>Date posted </p>
+                  <p>|</p>
+                  <p> _ comments</p>
+                </div>
+                <h3>Title of Post</h3>
+                <p>Post excerpt (first 50 words) : blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+                  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah...</p>
+                <button>Read more</button>
+              </div>
             </div>
+          </div>
+          <div className={styles.side_container}>
+
+          </div>
         </div>
       </div>
     </div>
@@ -71,7 +96,7 @@ export async function getStaticProps() {
   } else {
     getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
   }
-  
+
   console.log(postsArr)
 
   return {

@@ -1,7 +1,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   min-height: 100vh;
   width: 100%;
 }
@@ -144,6 +143,7 @@
   align-items: center;
   width: 93vw;
   margin: 2vw 0vw;
+  margin-left: 3.2vw;
 }
 
 .email_words_container {
@@ -195,6 +195,59 @@
   border-color: transparent;
   background-color: #8D68AE;
   font-family: "ABeeZee";
+}
+
+.main_container {
+  display: flex;
+}
+
+.posts_container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3.2vw;
+}
+
+.latest_posts_title {
+  display: flex;
+  align-items: center;
+  gap: .8vw;
+}
+
+.latest_posts_title > div{
+  background-color: #F6A01E;
+  height: 2.6vw;
+  width: 1.5vw;
+  border-radius: 3%;
+}
+
+.latest_posts_title > h2 {
+  font-family: "Alegreya SC";
+  font-weight: 400;
+  font-size: 2vw;
+}
+
+.latest_post {
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+  font-family: "Bubbler One";
+}
+
+.placeholder_image {
+  background-color: #D9D9D9;
+  width: 20vw;
+  height: 256px;
+}
+
+.post_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.post_container > div{
+  display: flex;
+  gap: 1.5vw;
+  font-size: 2vw;
 }
 
 
