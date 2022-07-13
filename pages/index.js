@@ -46,7 +46,12 @@ export default function Home({ posts }) {
         </div>
         <div className={styles.email_container}>
             <div className={styles.email_words_container}>
-                
+                <h1>K</h1>
+                <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
+            </div>
+            <div className={styles.email_input_container}>
+                <input type="text" placeholder='Your email...'/>
+                <button>Let's go!</button>
             </div>
         </div>
       </div>
