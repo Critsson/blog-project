@@ -6,6 +6,25 @@ import styles from '../styles/Home.module.css'
 
 export default function Home({ posts }) {
 
+  const latestPostsArray = [];
+
+  for (let i = 0; i < 4; i++) {
+    latestPostsArray.push(<div className={styles.latest_post}>
+      <div className={styles.placeholder_image}></div>
+      <div className={styles.post_container}>
+        <div>
+          <p>Date posted </p>
+          <p>|</p>
+          <p> _ comments</p>
+        </div>
+        <h3>Title of Post</h3>
+        <p>Post excerpt (first 50 words) : blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
+          blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah...</p>
+        <button>Read more</button>
+      </div>
+    </div>)
+  }
+
   return (
     <div>
       <Head>
@@ -60,20 +79,7 @@ export default function Home({ posts }) {
               <div></div>
               <h2>LATEST POSTS</h2>
             </div>
-            <div className={styles.latest_post}>
-              <div className={styles.placeholder_image}></div>
-              <div className={styles.post_container}>
-                <div>
-                  <p>Date posted </p>
-                  <p>|</p>
-                  <p> _ comments</p>
-                </div>
-                <h3>Title of Post</h3>
-                <p>Post excerpt (first 50 words) : blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-                  blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah...</p>
-                <button>Read more</button>
-              </div>
-            </div>
+            {latestPostsArray}
           </div>
           <div className={styles.side_container}>
 

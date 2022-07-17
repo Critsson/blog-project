@@ -229,6 +229,7 @@
 .latest_post {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 5vw;
   font-family: "Bubbler One";
 }
@@ -236,18 +237,41 @@
 .placeholder_image {
   background-color: #D9D9D9;
   width: 19vw;
-  height: 256px;
+  height: 19vw;
 }
 
 .post_container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2.5vw;
 }
 
 .post_container > div{
   display: flex;
   gap: 1.5vw;
-  font-size: 2vw;
+  font-size: 1.7vw;
+}
+
+.post_container > h3 {
+  font-size: 2.3vw;
+  margin: 0px;
+}
+
+.post_container > p {
+  width: 50vw;
+  font-size: 1.5vw;
+}
+
+.post_container > button {
+  border-radius: 5px;
+  border-color: transparent;
+  width: 11vw;
+  height: 3vw;
+  font-family: "ABeeZee";
+  color: #FDDA6F;
+  background-color: #8D68AEA1;
+  font-size: 1.5vw;
 }
 
 
