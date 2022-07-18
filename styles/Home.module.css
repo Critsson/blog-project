@@ -198,6 +198,11 @@
   font-family: "ABeeZee";
 }
 
+.email_input_container > button:hover {
+  cursor: pointer;
+  background-color: #865aac;
+}
+
 .main_container {
   display: flex;
   gap: 10.7vw;
@@ -238,25 +243,25 @@
 
 .placeholder_image {
   background-color: #D9D9D9;
-  width: 19vw;
-  height: 19vw;
+  width: 16vw;
+  height: 16vw;
 }
 
 .post_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2.5vw;
+  margin-bottom: 2vw;
 }
 
 .post_container > div{
   display: flex;
   gap: 1.5vw;
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 .post_container > h3 {
-  font-size: 2.3vw;
+  font-size: 2vw;
   margin: 0px;
 }
 
@@ -269,15 +274,16 @@
   border-radius: 5px;
   border-color: transparent;
   width: 11vw;
-  height: 3vw;
+  height: 2.5vw;
   font-family: "ABeeZee";
   color: #FDDA6F;
   background-color: #8D68AEA1;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 .post_container > button:hover {
   cursor: pointer;
+  background-color: #7e5e9ba1;
 }
 
 .side_container {
@@ -331,12 +337,193 @@
   background-color:#F6A01E;
   border-color: transparent;
   width: 8.8vw;
-  margin-top: 30px;
+  margin-top: 1.55vw;
 }
 
 .popular_posts {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 1.55vw;
+}
+
+.popular_posts > h2 {
+  font-family: "ABeeZee";
+  font-style: normal;
+  font-size: 1.6vw;
+  color: #000000BF;
+  font-weight: 400;
+  margin-right: 11.8vw;
+}
+
+.slideshow {
+  display: flex;
+  align-items: center;
+  gap: .5vw;
+}
+.arrow {
+  width: 2.2vw;
+  height: 2.2vw;
+}
+
+.arrow:hover {
+  cursor: pointer;
+}
+
+.preview {
+  background-color: #D9D9D9;
+  width: 18.2vw;
+  height: 12vw;
+}
+
+.preview:hover {
+  cursor: pointer;
+}
+
+.date_posted {
+  display: flex;
+  font-family: "Bubbler One";
+  gap: 1vw;
+  font-size: 1.1vw;
+  margin-right: 5.7vw;
+  margin-bottom: -2.4vw;
+}
+
+.popular_posts > h3 {
+  font-family: "Bubbler One";
+  font-size: 1.6vw;
+  font-weight: 700;
+  margin-right: 11.3vw;
+}
+
+.dot_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .3vw;
+  margin-top: 1.3vw;
+  margin-bottom: 1.65vw;
+}
+
+.dot_unselected {
+  background-color: #D9D9D9;
+  width: .5vw;
+  height: .5vw;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.dot_selected {
+  background-color: #868686;
+  width: .5vw;
+  height: .5vw;
+  border-radius: 50%;
+  border-color: transparent;
+}
+
+.dear_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.dear_container > h2 {
+  font-family: "ABeeZee";
+  color: #000000BF;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.6vw;
+  margin-bottom: -.5vw;
+  margin-top: 2vw;
+}
+
+.dear_container > p {
+  font-family: "Bubbler One";
+  font-size: 1.4vw;
+}
+
+.dear_container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name_text {
+  border-top-style:hidden;
+  border-left-style:hidden;
+  border-right-style:hidden;
+  border-bottom-color: #8D68AE;
+  border-width: .2vw;
+  width: 20vw;
+  font-family: "ABeeZee";
+  font-size: 1.1vw;
+  color: #D39AF9;
+  padding-left: .5vw;
+}
+
+.name_text::placeholder {
+  color: #D39AF9;
+}
+
+.name_text:focus {
+  outline: none;
+}
+
+.checkbox_container {
+  display: flex;
+  align-items: center;
+  gap: .5vw;
+}
+
+.checkbox {
+  accent-color: #D39AF9;
+  margin-top: .6vw;
+}
+
+.checkbox_label {
+  font-family: "Bubbler One";
+  margin-right: 7.2vw;
+  font-size: .9vw;
+  margin-top: .5vw;
+}
+
+.text_area {
+  width: 20vw;
+  height: 10vw;
+  border-color: #8D68AE;
+  border-width: .2vw;
+  color:#D39AF9;
+  font-family: "ABeeZee";
+  font-size: 1.1vw;
+  margin-top: 1.7vw;
+  padding-left: .5vw;
+}
+
+.text_area::placeholder {
+  color:#D39AF9;
+}
+
+.text_area:focus {
+  outline: none;
+}
+
+.text_area_button {
+  margin-top: 1.3vw;
+  width: 6vw;
+  font-family: "ABeeZee";
+  color: white;
+  background-color: #F6A01EAB;
+  border-color: transparent;
+  border-radius: 20px;
+  height: 2vw;
+  font-size: 1.1vw;
+  margin-left: 14vw;
+}
+
+.text_area_button:hover {
+  cursor: pointer;
+  background-color: #e6951dab;
 }
 
 @media only screen and (max-width: 600px) {

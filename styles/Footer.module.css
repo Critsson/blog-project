@@ -6,6 +6,7 @@
     justify-content: space-between;
     padding: 1vw 2vw;
     gap: 10vw;
+    margin-top: 1vw;
 }
 
 .logo_container {
@@ -106,6 +107,7 @@
         flex-direction: column;
         padding: 15vw 0vw;
         gap: 9vw;
+        margin-top: 1vw;
     }
     .info_container {
         display: flex;

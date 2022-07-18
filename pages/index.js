@@ -1,13 +1,41 @@
 import Head from 'next/head'
+import React from "react"
 import Image from 'next/image'
 import Link from "next/link"
 import welcomeImage from "../public/images/welcome.svg"
 import gloriaImage from "../public/images/ellipse_gloria.svg"
+import leftArrow from "../public/images/arrow_left.svg"
+import rightArrow from "../public/images/arrow_right.svg"
 import styles from '../styles/Home.module.css'
 
 export default function Home({ posts }) {
 
   const latestPostsArray = [];
+  const [postCount, setPostCount] = React.useState(0)
+
+  const increasePreview = () => {
+    if (postCount !== 4) {
+      setPostCount((prevCount) => {
+        const placeholder = prevCount;
+        placeholder++;
+        return placeholder;
+      })
+    } else {
+      setPostCount(0)
+    }
+  }
+
+  const decreasePreview = () => {
+    if (postCount !== 0) {
+      setPostCount((prevCount) => {
+        const placeholder = prevCount;
+        placeholder--;
+        return placeholder;
+      })
+    } else {
+      setPostCount(4)
+    }
+  }
 
   for (let i = 0; i < 4; i++) {
     latestPostsArray.push(<div className={styles.latest_post}>
@@ -95,14 +123,47 @@ export default function Home({ posts }) {
             <div className={styles.popular_posts}>
               <h2>Popular Posts</h2>
               <div className={styles.slideshow}>
-
+                <div onClick={decreasePreview} className={styles.arrow}>
+                  <Image src={leftArrow} alt="Left Arrow" width="100%" height="100%" />
+                </div>
+                <div className={styles.preview}>
+                </div>
+                <div onClick={increasePreview} className={styles.arrow}>
+                  <Image src={rightArrow} alt="Right Arrow" width="100%" height="100%" />
+                </div>
               </div>
-              <div>
+              <div className={styles.date_posted}>
                 <p>Date posted </p>
                 <p>|</p>
                 <p> _ comments</p>
               </div>
               <h3>Title of Post</h3>
+              <div className={styles.dot_container}>
+                <div className={postCount === 0 ? styles.dot_selected : styles.dot_unselected}>
+                </div>
+                <div className={postCount === 1 ? styles.dot_selected : styles.dot_unselected}>
+                </div>
+                <div className={postCount === 2 ? styles.dot_selected : styles.dot_unselected}>
+                </div>
+                <div className={postCount === 3 ? styles.dot_selected : styles.dot_unselected}>
+                </div>
+                <div className={postCount === 4 ? styles.dot_selected : styles.dot_unselected}>
+                </div>
+              </div>
+              <hr className={styles.side_divider}></hr>
+            </div>
+            <div className={styles.dear_container}>
+              <h2>“Dear Glostar...”</h2>
+              <p>Have a topic or question you'd like me to post about? Send a submission below!</p>
+              <div>
+                <input className={styles.name_text} type="text" placeholder='Name...' />
+                <div className={styles.checkbox_container}>
+                  <input className={styles.checkbox} type="checkbox" id="check" />
+                  <label className={styles.checkbox_label} for="check">Check to remain anonymous</label>
+                </div>
+                <textarea className={styles.text_area} placeholder='Message...' />
+                <button className={styles.text_area_button}>Submit</button>
+              </div>
             </div>
           </div>
         </div>
