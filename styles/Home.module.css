@@ -1,3 +1,4 @@
+
 .container {
   display: flex;
   flex-direction: column;
@@ -260,7 +261,7 @@
 }
 
 .post_container > p {
-  width: 40vw;
+  width: 35vw;
   font-size: 1.5vw;
 }
 
@@ -273,6 +274,10 @@
   color: #FDDA6F;
   background-color: #8D68AEA1;
   font-size: 1.5vw;
+}
+
+.post_container > button:hover {
+  cursor: pointer;
 }
 
 .side_container {
@@ -288,9 +293,26 @@
   flex-direction: column;
 }
 
+.side_gloria > div {
+  width: 12vw;
+  height: 12vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .side_gloria > p {
   font-family: "Bubbler One";
   font-size: 1.6vw;
+  width: 23vw;
+}
+
+.side_gloria > p::first-letter {
+  font-size: 2.5vw;
+}
+
+.side_gloria > h3:hover {
+  cursor: pointer;
 }
 
 .side_gloria > h3 {
@@ -300,6 +322,22 @@
   font-size: 1.3vw;
 }
 
+.side_gloria > h3::first-letter {
+  font-size: 1.6vw;
+}
+
+.side_divider {
+  height: .3vw;
+  background-color:#F6A01E;
+  border-color: transparent;
+  width: 8.8vw;
+  margin-top: 30px;
+}
+
+.popular_posts {
+  display: flex;
+  flex-direction: column;
+}
 
 @media only screen and (max-width: 600px) {
   .banner {

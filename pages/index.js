@@ -84,10 +84,25 @@ export default function Home({ posts }) {
           </div>
           <div className={styles.side_container}>
             <div className={styles.side_gloria}>
-              <Image src={gloriaImage} alt="Photo of me" width={250} height={250} />
-              <p>Hi there! I’m Gloria, aka “Glostar.” As a busy student in this digital age, my hobbies have been life-lines in a sea of responsibilities. 
+              <div>
+                <Image src={gloriaImage} alt="Photo of me" width="250%" height="250%" />
+              </div>
+              <p>Hi there! I’m Gloria, aka “Glostar.” As a busy student in this digital age, my hobbies have been life-lines in a sea of responsibilities.
                 Together, let’s learn to live one day at a time.</p>
               <h3>GET TO KNOW ME </h3>
+              <hr className={styles.side_divider}></hr>
+            </div>
+            <div className={styles.popular_posts}>
+              <h2>Popular Posts</h2>
+              <div className={styles.slideshow}>
+
+              </div>
+              <div>
+                <p>Date posted </p>
+                <p>|</p>
+                <p> _ comments</p>
+              </div>
+              <h3>Title of Post</h3>
             </div>
           </div>
         </div>
