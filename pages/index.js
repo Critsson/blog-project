@@ -154,12 +154,12 @@ export default function Home({ posts }) {
             </div>
             <div className={styles.dear_container}>
               <h2>“Dear Glostar...”</h2>
-              <p>Have a topic or question you'd like me to post about? Send a submission below!</p>
+              <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
               <div>
                 <input className={styles.name_text} type="text" placeholder='Name...' />
                 <div className={styles.checkbox_container}>
                   <input className={styles.checkbox} type="checkbox" id="check" />
-                  <label className={styles.checkbox_label} for="check">Check to remain anonymous</label>
+                  <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                 </div>
                 <textarea className={styles.text_area} placeholder='Message...' />
                 <button className={styles.text_area_button}>Submit</button>
