@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from "next/link"
 import welcomeImage from "../public/images/welcome.svg"
+import gloriaImage from "../public/images/ellipse_gloria.svg"
 import styles from '../styles/Home.module.css'
 
 export default function Home({ posts }) {
@@ -82,7 +83,12 @@ export default function Home({ posts }) {
             {latestPostsArray}
           </div>
           <div className={styles.side_container}>
-
+            <div className={styles.side_gloria}>
+              <Image src={gloriaImage} alt="Photo of me" width={250} height={250} />
+              <p>Hi there! I’m Gloria, aka “Glostar.” As a busy student in this digital age, my hobbies have been life-lines in a sea of responsibilities. 
+                Together, let’s learn to live one day at a time.</p>
+              <h3>GET TO KNOW ME </h3>
+            </div>
           </div>
         </div>
       </div>
