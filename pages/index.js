@@ -12,6 +12,20 @@ export default function Home({ posts }) {
 
   const latestPostsArray = [];
   const [postCount, setPostCount] = React.useState(0)
+  const [isMobile, setIsMobile] = React.useState(false)
+
+  const updateWindowSize = () => {
+    setIsMobile(window.innerWidth <= 600)
+  }
+
+  React.useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true)
+    }
+
+    window.addEventListener("resize", updateWindowSize)
+    return () => window.removeEventListener("resize", updateWindowSize)
+  })
 
   const increasePreview = () => {
     if (postCount !== 4) {
@@ -102,6 +116,16 @@ export default function Home({ posts }) {
             <button>Let&apos;s go!</button>
           </div>
         </div>
+        {isMobile === true &&
+          <div className={styles.responsive_gloria}>
+            <div>
+              <Image src={gloriaImage} alt="Photo of me" width="250%" height="250%" />
+            </div>
+            <p>Hi there! I’m Gloria, aka “Glostar.” As a busy student in this digital age, my hobbies have been life-lines in a sea of responsibilities.
+              Together, let’s learn to live one day at a time.</p>
+            <h3>GET TO KNOW ME </h3>
+            <hr className={styles.responsive_side_divider}></hr>
+          </div>}
         <div className={styles.main_container}>
           <div className={styles.posts_container}>
             <div className={styles.latest_posts_title}>
