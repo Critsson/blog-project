@@ -1002,15 +1002,16 @@
   }
 
   .responsive_gloria > div {
-    width: 55vw;
-    height: 55vw;
+    width: 54vw;
+    height: 54vw;
   }
 
   .responsive_gloria > p {
     font-family: "Bubbler One";
     font-size: 7vw;
-    width: 85vw;
+    width: 65vw;
     margin-top: 1vw;
+    margin-left: 6vw;
   }
   
   .responsive_gloria > p::first-letter {
@@ -1025,19 +1026,19 @@
     font-family: "Alegreya Sans";
     font-weight: 500;
     color: #D39AF9;
-    font-size: 7vw;
-    margin-top: 1vw;
+    font-size: 6vw;
+    margin-top:0.1vw;
   }
   
   .responsive_gloria > h3::first-letter {
-    font-size: 9vw;
+    font-size: 8.5vw;
   }
 
   .responsive_side_divider {
     height: 1vw;
     background-color:#F6A01E;
     border-color: transparent;
-    width: 40vw;
+    width: 35vw;
     margin-top: 1.55vw;
   }
 }

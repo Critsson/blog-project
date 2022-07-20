@@ -1,8 +1,169 @@
-.test {
-    background-image: radial-gradient(#FFB69E 4%, transparent 6%),
-        radial-gradient( #FFB69E 4%, transparent 6%);
-    background-color: #ffeba9;
-    background-position: 0 0, 50px 50px;
-    background-size: 100px 100px;
-    height: 100vh;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/circles_background.png");
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+.about_container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    padding: .5vw 3vw .5vw 3vw;
+}
+
+.headshot {
+    width: 46vw;
+}
+
+.first_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    gap: 2vw;
+    margin-top: 2vw;
+}
+
+.first_paragraph {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.first_line {
+    display: flex;
+    align-items: center;
+    margin-bottom: -4.5vw;
+}
+
+.first_line>p {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+}
+
+.first_paragraph>p {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+}
+
+.first_line>h1 {
+    font-family: "Bubbler One";
+    font-size: 7vw;
+}
+
+.second_paragraph {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: -1.7vw;
+}
+
+.third_paragraph {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: 4vw;
+}
+
+.ellipse_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13vw;
+    margin-top: 2.5vw;
+    position: relative;
+}
+
+.ellipse_5 {
+    background-image: url("/images/ellipse_5.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+}
+
+.ellipse_6 {
+    background-image: url("/images/ellipse_6.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+}
+
+.ellipse_7 {
+    background-image: url("/images/ellipse_7.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position-y: 2px;
+}
+
+.small_banner_5 {
+    position: absolute;
+    top: 14vw;
+    left: 17.06vw;
+    background-color: #8D68AE;
+    color: #F6A01E;
+    font-family: "ABeeZee";
+    font-size: 1.2vw;
+    width: 9vw;
+    height: 1.9vw;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small_banner_6 {
+    position: absolute;
+    top: 14vw;
+    background-color: #8D68AE;
+    color: #F6A01E;
+    font-family: "ABeeZee";
+    font-size: 1.2vw;
+    width: 9vw;
+    height: 1.9vw;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.small_banner_7 {
+    position: absolute;
+    top: 14vw;
+    right: 17vw;
+    background-color: #8D68AE;
+    color: #F6A01E;
+    font-family: "ABeeZee";
+    font-size: 1.2vw;
+    width: 9vw;
+    height: 1.9vw;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
