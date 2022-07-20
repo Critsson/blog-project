@@ -18,7 +18,7 @@ export default function about() {
                 <div className={styles.first_paragraph}>
                     <div className={styles.first_line}>
                         <h1>H</h1>
-                        <p>ello! My name is Gloria, known affectionately as "Glostar" by friends and family.</p>
+                        <p>ello! My name is Gloria, known affectionately as &quot;Glostar&quot; by friends and family.</p>
                     </div>
                     <p>As a first-year medical student, I decided to start blogging as a method of creative, emotional, and intellectual expression.</p>
                     <p>Through my writing, I hope to inspire and encourage others, look back</p>
