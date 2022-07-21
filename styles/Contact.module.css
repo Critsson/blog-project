@@ -1,0 +1,86 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/circles_background.png");
+    padding-top: 1.5vw;
+    padding-bottom: 1.5vw;
+}
+
+.about_container {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    padding: .5vw 3vw .5vw 3vw;
+}
+
+.first_paragraph {
+    font-size: 2vw;
+    font-family: "Bubbler One";
+    padding: 2vw 8vw 0vw 8vw;
+}
+
+.input_container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0vw 15vw 0vw 15vw;
+    margin-bottom: .6vw;
+}
+
+.label {
+    display: flex;
+    gap: .3vw;
+    font-family: "Bubbler One";
+    font-size: 1.9vw;
+    margin-bottom: -1.8vw;
+    margin-left: 1vw;
+}
+
+.asterisk {
+    color: red;
+    line-height: 1.6vw;
+}
+
+.text_input {
+    height: 4vw;
+    padding-left: 1vw;
+    font-size: 1.9vw;
+    font-family: "Bubbler One";
+}
+
+.textarea_container {
+    display: flex;
+    flex-direction: column;
+    padding: 0vw 15vw 0vw 15vw;
+    justify-content: center;
+}
+
+.textarea_input {
+    font-family: "Bubbler One";
+    font-size: 1.9vw;
+    padding-left: 1vw;
+    padding-top: .5vw;
+    height: 30vw;
+}
+
+.submit_button {
+    margin-top: 2.8vw;
+    margin-bottom: 1.8vw;
+    width: 8vw;
+    font-family: "ABeeZee";
+    color: white;
+    background-color: #D39AF9;
+    border-color: transparent;
+    border-radius: 20px;
+    height: 2.5vw;
+    font-size: 1.4vw;
+    margin-left: 16vw;
+  }
+  
+  .submit_button:hover {
+    cursor: pointer;
+    background-color: #c18de4;
+  }
