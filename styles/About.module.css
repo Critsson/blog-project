@@ -79,13 +79,9 @@
     justify-content: center;
     gap: 13vw;
     margin-top: 2.5vw;
-    position: relative;
 }
 
 .ellipse_5 {
-    background-image: url("/images/ellipse_5.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 15vw;
     width: 15vw;
     border-radius: 50%;
@@ -93,12 +89,17 @@
     align-items: center;
     justify-content: center;
     background-position-y: 2px;
+}
+
+.ellipse5 {
+    z-index: 0;
+}
+
+.ellipse_5:hover {
+    cursor: pointer;
 }
 
 .ellipse_6 {
-    background-image: url("/images/ellipse_6.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 15vw;
     width: 15vw;
     border-radius: 50%;
@@ -106,12 +107,17 @@
     align-items: center;
     justify-content: center;
     background-position-y: 2px;
+}
+
+.ellipse6 {
+    z-index: 0;
+}
+
+.ellipse_6:hover {
+    cursor: pointer;
 }
 
 .ellipse_7 {
-    background-image: url("/images/ellipse_7.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 15vw;
     width: 15vw;
     border-radius: 50%;
@@ -121,10 +127,23 @@
     background-position-y: 2px;
 }
 
+.ellipse7 {
+    z-index: 0;
+}
+
+.ellipse_7:hover {
+    cursor: pointer;
+}
+
+.banner_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19vw;
+    margin-top: -1.4vw;
+}
+
 .small_banner_5 {
-    position: absolute;
-    top: 14vw;
-    left: 17.06vw;
     background-color: #8D68AE;
     color: #F6A01E;
     font-family: "ABeeZee";
@@ -135,11 +154,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .small_banner_6 {
-    position: absolute;
-    top: 14vw;
     background-color: #8D68AE;
     color: #F6A01E;
     font-family: "ABeeZee";
@@ -150,12 +168,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .small_banner_7 {
-    position: absolute;
-    top: 14vw;
-    right: 17vw;
     background-color: #8D68AE;
     color: #F6A01E;
     font-family: "ABeeZee";
@@ -166,4 +182,141 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
+
+.fourth_paragraph {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    margin-top: 2.5vw;
+}
+
+.fifth_paragraph {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+    padding-left: 3vw;
+    margin-top: 2vw;
+}
+
+.last_container {
+    display: flex;
+    align-items: center;
+}
+
+.here {
+    font-family: "Bubbler One";
+    font-size: 2vw;
+    padding-right: 3vw;
+    margin-top: 2vw;
+    margin-left: .4vw;
+}
+
+.here:hover {
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.dear_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2vw;
+  }
+  
+  .dear_container > h2 {
+    font-family: "ABeeZee";
+    color: #000000BF;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5vw;
+    margin-bottom: 2.5vw;
+    margin-top: 2vw;
+    margin-left: 8vw;
+  }
+  
+  .dear_container > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 17.5vw;
+  }
+  
+  .name_text {
+    border-top-style:hidden;
+    border-left-style:hidden;
+    border-right-style:hidden;
+    border-bottom-color: #8D68AE;
+    border-width: .2vw;
+    width: 30vw;
+    font-family: "ABeeZee";
+    font-size: 1.5vw;
+    color: #D39AF9;
+    padding-left: .5vw;
+  }
+  
+  .name_text::placeholder {
+    color: #D39AF9;
+  }
+  
+  .name_text:focus {
+    outline: none;
+  }
+  
+  .checkbox_container {
+    display: flex;
+    align-items: center;
+    gap: .5vw;
+  }
+  
+  .checkbox {
+    accent-color: #D39AF9;
+    margin-top: .6vw;
+  }
+  
+  .checkbox_label {
+    font-family: "Bubbler One";
+    margin-right: 7.2vw;
+    font-size: 1.2vw;
+    margin-top: .5vw;
+  }
+  
+  .text_area {
+    width: 65vw;
+    height: 15vw;
+    border-color: #8D68AE;
+    border-width: .2vw;
+    color:#D39AF9;
+    font-family: "ABeeZee";
+    font-size: 1.5vw;
+    margin-top: 1.7vw;
+    padding-left: .5vw;
+  }
+  
+  .text_area::placeholder {
+    color:#D39AF9;
+  }
+  
+  .text_area:focus {
+    outline: none;
+  }
+  
+  .text_area_button {
+    margin-top: 1.3vw;
+    width: 8vw;
+    font-family: "ABeeZee";
+    color: white;
+    background-color: #F6A01EAB;
+    border-color: transparent;
+    border-radius: 20px;
+    height: 2.5vw;
+    font-size: 1.4vw;
+    margin-left: 57vw;
+  }
+  
+  .text_area_button:hover {
+    cursor: pointer;
+    background-color: #e6951dab;
+  }
