@@ -8,7 +8,7 @@ import ellipse6 from "../public/images/ellipse_6.svg"
 import ellipse7 from "../public/images/ellipse_7.svg"
 import React from "react"
 
-export default function about() {
+export default function About() {
 
     const [herePressed, setHerePressed] = React.useState(false)
 
@@ -38,17 +38,17 @@ export default function about() {
             <div className={styles.ellipse_container}>
                 <Link href="/blog/fitnessandhealth">
                     <div className={styles.ellipse_5}>
-                        <Image src={ellipse5} className={styles.ellipse5} width="500" height="500" />
+                        <Image src={ellipse5} className={styles.ellipse5} alt="Picture of Gloria" width="500" height="500" />
                     </div>
                 </Link>
                 <Link href="/blog/creativeworks">
                     <div className={styles.ellipse_6}>
-                        <Image src={ellipse6} className={styles.ellipse6} width="500" height="500" />
+                        <Image src={ellipse6} className={styles.ellipse6} alt="Crochet" width="500" height="500" />
                     </div>
                 </Link>
                 <Link href="/blog/entertainment">
                     <div className={styles.ellipse_7}>
-                        <Image src={ellipse7} className={styles.ellipse7} width="500" height="500" />
+                        <Image src={ellipse7} className={styles.ellipse7} alt="Anime and Manga" width="500" height="500" />
                     </div>
                 </Link>
             </div>
