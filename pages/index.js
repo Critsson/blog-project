@@ -117,7 +117,9 @@ export default function Home({ posts }) {
               </div>
               <p>Hi there! I’m Gloria, aka “Glostar.” As a busy student in this digital age, my hobbies have been life-lines in a sea of responsibilities.
                 Together, let’s learn to live one day at a time.</p>
-              <h3>GET TO KNOW ME </h3>
+              <Link href="/about">
+                <h3>GET TO KNOW ME </h3>
+              </Link>
               <hr className={styles.side_divider}></hr>
             </div>
             <div className={styles.popular_posts}>

@@ -67,16 +67,16 @@
 }
 
 .submit_button {
-    margin-top: 2.8vw;
+    margin-top: 2.6vw;
     margin-bottom: 1.8vw;
-    width: 8vw;
+    width: 9.5vw;
     font-family: "ABeeZee";
     color: white;
     background-color: #D39AF9;
     border-color: transparent;
     border-radius: 20px;
-    height: 2.5vw;
-    font-size: 1.4vw;
+    height: 2.8vw;
+    font-size: 1.6vw;
     margin-left: 16vw;
   }
   

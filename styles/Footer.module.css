@@ -41,6 +41,10 @@
     font-weight: normal;
 }
 
+.links_container > div > h3:hover {
+    cursor: pointer;
+}
+
 .ama_container {
     display: flex;
     flex-direction: column;
@@ -89,6 +93,10 @@
     width: 3vw;
 }
 
+.ellipse:hover {
+    cursor: pointer;
+}
+
 .icon {
     display: flex;
     align-items: center;
@@ -96,6 +104,8 @@
     width: 2vw;
     height: 2vw;
 }
+
+
 
 @media only screen and (max-width: 600px) {
     .container {
