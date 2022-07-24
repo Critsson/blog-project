@@ -15,7 +15,7 @@ export default function AdminHome() {
             <div className={styles.side_nav_container}>
                 <div className={styles.logo_container}>
                     <Link href="/">
-                        <Image src={logo} />
+                        <Image src={logo} alt="Glorious Diaries Logo"/>
                     </Link>
                 </div>
                 <Link href="/admin">
