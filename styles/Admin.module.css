@@ -60,3 +60,24 @@
     font-size: .8vw;
 }
 
+.logout_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: .3vw;
+    font-family: "Roboto";
+    font-weight: 500;
+    gap: .2vw;
+    font-size: 1vw;
+    margin-top: 3vh;
+    color: white;
+}
+
+.logout_button:hover {
+    background-color: #fafafa;
+    color: #212121;
+    cursor: pointer;
+}
+

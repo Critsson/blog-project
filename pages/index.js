@@ -38,7 +38,7 @@ export default function Home({ posts }) {
   }
 
   for (let i = 0; i < 4; i++) {
-    latestPostsArray.push(<div className={styles.latest_post}>
+    latestPostsArray.push(<div key={i} className={styles.latest_post}>
       <div className={styles.placeholder_image}></div>
       <div className={styles.post_container}>
         <div>
