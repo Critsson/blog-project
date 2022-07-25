@@ -17,7 +17,7 @@ export default function AdminInbox() {
 
     React.useEffect(() => {
         if (status === "unauthenticated") {
-            signIn("credentials");
+            signIn();
         }
     })
 
