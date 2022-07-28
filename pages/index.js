@@ -8,6 +8,7 @@ import leftArrow from "../public/images/arrow_left.svg"
 import rightArrow from "../public/images/arrow_right.svg"
 import styles from '../styles/Home.module.css'
 
+
 export default function Home({ posts }) {
 
   const latestPostsArray = [];
