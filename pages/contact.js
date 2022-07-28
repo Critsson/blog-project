@@ -1,10 +1,15 @@
 import contactImage from "../public/images/contact.png"
 import styles from "../styles/Contact.module.css"
 import Image from "next/image"
+import Head from "next/head"
 
 export default function Contact() {
     return (
         <div>
+            <Head>
+                <title>Contact</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <div className={styles.header}>
                 <div className={styles.about_container}>
                     <Image src={contactImage} alt="Contact Me Page" width="500" height="98.8" />

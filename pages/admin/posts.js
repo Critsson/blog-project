@@ -8,6 +8,7 @@ import CommentRoundedIcon from '@mui/icons-material/CommentRounded';
 import BookRoundedIcon from '@mui/icons-material/BookRounded';
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded';
 import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
+import ModeRoundedIcon from '@mui/icons-material/ModeRounded';
 import { useSession, signIn, signOut } from "next-auth/react"
 import React from "react"
 
@@ -54,6 +55,12 @@ export default function AdminPosts() {
                         <div className={adminStyles.nav_link_container}>
                             <BookRoundedIcon sx={{ fontSize: "170%" }} />
                             <p>My Posts</p>
+                        </div>
+                    </Link>
+                    <Link href="/admin/drafts">
+                        <div className={adminStyles.nav_link_container}>
+                            <ModeRoundedIcon sx={{ fontSize: "170%" }} />
+                            <p>My Drafts</p>
                         </div>
                     </Link>
                     <Link href="/admin/analytics">

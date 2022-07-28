@@ -7,6 +7,7 @@ import ellipse5 from "../public/images/ellipse_5.png"
 import ellipse6 from "../public/images/ellipse_6.svg"
 import ellipse7 from "../public/images/ellipse_7.svg"
 import React from "react"
+import Head from "next/head"
 
 export default function About() {
 
@@ -15,6 +16,10 @@ export default function About() {
 
     return (
         <div>
+            <Head>
+                <title>About Me</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
             <div className={styles.header}>
                 <div className={styles.about_container}>
                     <Image src={aboutImage} alt="About Page" width="500" height="98.8" />
@@ -70,17 +75,17 @@ export default function About() {
             </div>
             {herePressed &&
                 <div className={styles.dear_container}>
-                <h2>“Dear Glostar...”</h2>
-                <div>
-                  <input className={styles.name_text} type="text" placeholder='Name...' />
-                  <div className={styles.checkbox_container}>
-                    <input className={styles.checkbox} type="checkbox" id="check" />
-                    <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
-                  </div>
-                  <textarea className={styles.text_area} placeholder='Message...' />
-                  <button className={styles.text_area_button}>Submit</button>
+                    <h2>“Dear Glostar...”</h2>
+                    <div>
+                        <input className={styles.name_text} type="text" placeholder='Name...' />
+                        <div className={styles.checkbox_container}>
+                            <input className={styles.checkbox} type="checkbox" id="check" />
+                            <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
+                        </div>
+                        <textarea className={styles.text_area} placeholder='Message...' />
+                        <button className={styles.text_area_button}>Submit</button>
+                    </div>
                 </div>
-              </div>
             }
         </div>
     )
