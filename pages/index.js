@@ -7,6 +7,7 @@ import gloriaImage from "../public/images/ellipse_gloria.svg"
 import leftArrow from "../public/images/arrow_left.svg"
 import rightArrow from "../public/images/arrow_right.svg"
 import styles from '../styles/Home.module.css'
+import Script from "next/script"
 
 
 export default function Home({ posts }) {
@@ -171,6 +172,19 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+      <Script>
+          {
+             `if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }`
+          }
+      </Script>
     </div>
   )
 }
