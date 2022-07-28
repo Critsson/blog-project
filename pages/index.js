@@ -8,7 +8,8 @@ import leftArrow from "../public/images/arrow_left.svg"
 import rightArrow from "../public/images/arrow_right.svg"
 import styles from '../styles/Home.module.css'
 import Script from "next/script"
-
+import fs from "fs"
+import path from "path"
 
 export default function Home({ posts }) {
 
@@ -191,23 +192,21 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const pool = require("../database/db.js")
-  const getAllBlogPosts = await pool.query("SELECT * FROM posts;")
-  const postsArr = [];
 
-  if (getAllBlogPosts.rows.length >= 4) {
-    for (let i = 0; i < 4; i++) {
-      postsArr.push(getAllBlogPosts.rows.pop())
+  const postsArr = fs.readdirSync(path.join("posts"))
+  const firstFour = [];
+
+  for(let i=0; i<4; i++) {
+    if(!postsArr[i]) {
+      firstFour.push("empty")
+      continue;
     }
-  } else {
-    getAllBlogPosts.rows.map((post) => postsArr.unshift(post))
+    firstFour.push(postsArr[i])
   }
-
-  console.log(postsArr)
 
   return {
     props: {
-      posts: postsArr
+      posts: firstFour
     }
   }
 }
