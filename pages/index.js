@@ -172,7 +172,7 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
-      <Script>
+      <Script id="netlify-identity">
           {
              `if (window.netlifyIdentity) {
               window.netlifyIdentity.on("init", user => {
