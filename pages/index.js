@@ -48,7 +48,7 @@ export default function Home({ posts }) {
 
     latestPostsArray.push(<div key={i} className={styles.latest_post}>
       <div className={styles.placeholder_image}>
-        <Image src={`/../public${parsedPosts[i].data.thumbnail}`} height="350" width="350"/>
+        <Image src={parsedPosts[i].data.thumbnail} alt="Post Thumbnail" height="350" width="350"/>
       </div>
       <div className={styles.post_container}>
         <div>
