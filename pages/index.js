@@ -10,11 +10,13 @@ import styles from '../styles/Home.module.css'
 import Script from "next/script"
 import fs from "fs"
 import path from "path"
+import matter from "gray-matter"
 
 export default function Home({ posts }) {
 
   const latestPostsArray = [];
   const [postCount, setPostCount] = React.useState(0)
+  const parsedPosts = JSON.parse(posts)
 
   const increasePreview = () => {
     if (postCount !== 4) {
@@ -41,17 +43,21 @@ export default function Home({ posts }) {
   }
 
   for (let i = 0; i < 4; i++) {
+
+    let first50 = parsedPosts[i].content.split("*").join("").split(" ").slice(0,30).join(" ") + "...";
+
     latestPostsArray.push(<div key={i} className={styles.latest_post}>
-      <div className={styles.placeholder_image}></div>
+      <div className={styles.placeholder_image}>
+        <Image src={`/../public${parsedPosts[i].data.thumbnail}`} height="350" width="350"/>
+      </div>
       <div className={styles.post_container}>
         <div>
-          <p>Date posted </p>
+          <p>{parsedPosts[i].data.date.slice(0,10)}</p>
           <p>|</p>
           <p> _ comments</p>
         </div>
-        <h3>Title of Post</h3>
-        <p>Post excerpt (first 50 words) : blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah
-          blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah...</p>
+        <h3>{parsedPosts[i].data.title}</h3>
+        <p>{first50}</p>
         <button>Read more</button>
       </div>
     </div>)
@@ -191,22 +197,35 @@ export default function Home({ posts }) {
   )
 }
 
-export async function getStaticProps() {
+export function getStaticProps() {
 
-  const postsArr = fs.readdirSync(path.join("posts"))
+  const fileArr = fs.readdirSync(path.join("posts")).reverse();
   const firstFour = [];
 
   for(let i=0; i<4; i++) {
-    if(!postsArr[i]) {
+    if(!fileArr[i]) {
       firstFour.push("empty")
       continue;
     }
-    firstFour.push(postsArr[i])
+    firstFour.push(fileArr[i])
   }
+
+  const postsArr = firstFour.map((file) => {
+    const slug = file.replace(".md", "")
+    const markdownData = fs.readFileSync(path.join("posts", file), "utf-8")
+
+
+    const {data, content} = matter(markdownData)
+    return {
+      slug,
+      data,
+      content
+    }
+  })
 
   return {
     props: {
-      posts: firstFour
+      posts: JSON.stringify(postsArr)
     }
   }
 }

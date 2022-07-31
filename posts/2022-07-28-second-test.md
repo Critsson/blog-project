@@ -9,4 +9,5 @@ Second Test
 
 * 1
 * 2
-* ![Test](/images/uploads/background.jpg "Test")
+
+![Test](/images/uploads/background.jpg "Test")
