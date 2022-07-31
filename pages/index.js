@@ -44,15 +44,15 @@ export default function Home({ posts }) {
 
   for (let i = 0; i < 4; i++) {
 
-    let first30 = parsedPosts[i].content.split("*").join("").split("#").join("").split(">").join("").split(" ").slice(0,30).join(" ") + "...";
+    let first30 = parsedPosts[i].content.split("*").join("").split("#").join("").split(">").join("").split(" ").slice(0, 30).join(" ") + "...";
 
     latestPostsArray.push(<div key={i} className={styles.latest_post}>
       <div className={styles.placeholder_image}>
-        <Image src={parsedPosts[i].data.thumbnail} alt="Post Thumbnail" height="350" width="350"/>
+        <Image src={parsedPosts[i].data.thumbnail} alt="Post Thumbnail" height="350" width="350" />
       </div>
       <div className={styles.post_container}>
         <div>
-          <p>{parsedPosts[i].data.date.slice(0,10)}</p>
+          <p>{parsedPosts[i].data.date.slice(0, 10)}</p>
           <p>|</p>
           <p> _ comments</p>
         </div>
@@ -68,7 +68,7 @@ export default function Home({ posts }) {
       <Head>
         <title>Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer/>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" defer />
       </Head>
       <div className={styles.container}>
         <div className={styles.banner}>
@@ -108,8 +108,10 @@ export default function Home({ posts }) {
             <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
           </div>
           <div className={styles.email_input_container}>
-            <input type="text" placeholder='Your email...' />
-            <button>Let&apos;s go!</button>
+            <form name="latest_news" method="POST" data-netlify="true" onSubmit="submit">
+              <input type="text" placeholder='Your email...' name="email"/>
+              <button>Let&apos;s go!</button>
+            </form>
           </div>
         </div>
         <div className={styles.main_container}>
@@ -181,8 +183,8 @@ export default function Home({ posts }) {
         </div>
       </div>
       <Script id="netlify-identity">
-          {
-             `if (window.netlifyIdentity) {
+        {
+          `if (window.netlifyIdentity) {
               window.netlifyIdentity.on("init", user => {
                 if (!user) {
                   window.netlifyIdentity.on("login", () => {
@@ -191,7 +193,7 @@ export default function Home({ posts }) {
                 }
               });
             }`
-          }
+        }
       </Script>
     </div>
   )
@@ -202,8 +204,8 @@ export function getStaticProps() {
   const fileArr = fs.readdirSync(path.join("posts")).reverse();
   const firstFour = [];
 
-  for(let i=0; i<4; i++) {
-    if(!fileArr[i]) {
+  for (let i = 0; i < 4; i++) {
+    if (!fileArr[i]) {
       firstFour.push("empty")
       continue;
     }
@@ -215,7 +217,7 @@ export function getStaticProps() {
     const markdownData = fs.readFileSync(path.join("posts", file), "utf-8")
 
 
-    const {data, content} = matter(markdownData)
+    const { data, content } = matter(markdownData)
     return {
       slug,
       data,
