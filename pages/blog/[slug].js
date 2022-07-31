@@ -11,7 +11,7 @@ import path from "path"
 import matter from "gray-matter"
 import { marked } from "marked"
 import parse from "html-react-parser"
-import { BoyRounded } from "@mui/icons-material"
+
 
 export default function BlogPage({ data, content, slug }) {
 
@@ -56,7 +56,7 @@ export default function BlogPage({ data, content, slug }) {
                 </div>
                 <div className={styles.thumbnail_container}>
                     <div className={styles.thumbnail}>
-                        <Image src={`/../public${postData.thumbnail}`} width="600" height="600" />
+                        <Image src={postData.thumbnail} width="600" height="600" />
                     </div>
                 </div>
                 <div className={styles.body_container}>
