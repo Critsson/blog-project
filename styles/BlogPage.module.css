@@ -30,7 +30,7 @@
 }
 
 .thumbnail {
-    width: 20vw;
+    width: 40vw;
 }
 
 .body_container {
@@ -40,8 +40,14 @@
     font-family: "Bubbler One";
 }
 
+.body_container > p {
+    display: flex;
+}
+
 .body_container > p > img {
     width: 70%;
-    margin-left: 10vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 

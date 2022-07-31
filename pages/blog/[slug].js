@@ -56,7 +56,7 @@ export default function BlogPage({ data, content, slug }) {
                 </div>
                 <div className={styles.thumbnail_container}>
                     <div className={styles.thumbnail}>
-                        <Image src={postData.thumbnail} alt="Post Thumbnail" width="600" height="600" />
+                        <Image src={postData.thumbnail} alt="Post Thumbnail" width="1000" height="700" />
                     </div>
                 </div>
                 <div className={styles.body_container}>
