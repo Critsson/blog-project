@@ -44,7 +44,7 @@ export default function Home({ posts }) {
 
   for (let i = 0; i < 4; i++) {
 
-    let first50 = parsedPosts[i].content.split("*").join("").split(" ").slice(0,30).join(" ") + "...";
+    let first30 = parsedPosts[i].content.split("*").join("").split("#").join("").split(">").join("").split(" ").slice(0,30).join(" ") + "...";
 
     latestPostsArray.push(<div key={i} className={styles.latest_post}>
       <div className={styles.placeholder_image}>
@@ -57,7 +57,7 @@ export default function Home({ posts }) {
           <p> _ comments</p>
         </div>
         <h3>{parsedPosts[i].data.title}</h3>
-        <p>{first50}</p>
+        <p>{first30}</p>
         <button>Read more</button>
       </div>
     </div>)
