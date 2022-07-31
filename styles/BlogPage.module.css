@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     margin-right: 3vw;
+    margin-top: 1vw;
 }
 
 .post_title {
@@ -19,8 +20,13 @@
     display: flex;
     align-items: center;
     gap: .6vw;
-    font-size: .94vw;
+    font-size: 1.2vw;
     margin-top: -1vw;
+}
+
+.post_description {
+    font-family: "Bubbler One";
+    font-size: 1.4vw;
 }
 
 .thumbnail_container {
@@ -40,14 +46,89 @@
     font-family: "Bubbler One";
 }
 
-.body_container > p {
-    display: flex;
+.body_container>p {
+    font-size: 1.4vw;
 }
 
-.body_container > p > img {
+.body_container>h1 {
+    font-size: 3vw;
+}
+
+.body_container>p>img {
     width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+.body_container>ul {
+    font-size: 1.4vw;
+    list-style: circle;
+}
+
+.body_container>blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    font-size: 1.5vw;
+    font-style: italic;
+}
+
+.bol {
+    font-family: "Bubbler One";
+    font-size: 1.4vw;
+}
+
+.divider_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.left_container {
+    display: flex;
+    flex-direction: column;
+    gap: .3vw;
+}
+
+.left_container>div {
+    height: .3vw;
+    background-color: #8D69AE;
+    border-color: transparent;
+}
+
+.right_container {
+    display: flex;
+    flex-direction: column;
+    gap: .3vw;
+}
+
+.right_container>div {
+    height: .3vw;
+    background-color: #8D69AE;
+    border-color: transparent;
+}
+
+.bottom_line {
+    width: 32.2vw;
+}
+
+.top_line1 {
+    width: 21vw;
+    margin-left: 11.2vw;
+}
+
+.top_line2 {
+    width: 21vw;
+    margin-left: 0vw;
+}
+
+.bottom_logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5vw;
+    height: 2.5vw;
+}

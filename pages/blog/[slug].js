@@ -11,6 +11,7 @@ import path from "path"
 import matter from "gray-matter"
 import { marked } from "marked"
 import parse from "html-react-parser"
+import bottomLogo from "../../public/images/bottom_logo.png"
 
 
 export default function BlogPage({ data, content, slug }) {
@@ -54,6 +55,7 @@ export default function BlogPage({ data, content, slug }) {
                     <h3> | </h3>
                     <h3>{postData.date.slice(0, 10)}</h3>
                 </div>
+                <p className={styles.post_description}>{postData.description}</p>
                 <div className={styles.thumbnail_container}>
                     <div className={styles.thumbnail}>
                         <Image src={postData.thumbnail} alt="Post Thumbnail" width="1000" height="700" />
@@ -62,8 +64,22 @@ export default function BlogPage({ data, content, slug }) {
                 <div className={styles.body_container}>
                     {parse(marked(content))}
                 </div>
+                <p className={styles.bol}>Best of luck,</p>
+                <div className={styles.divider_container}>
+                    <div className={styles.left_container}>
+                        <div className={styles.top_line1}></div>
+                        <div className={styles.bottom_line}></div>
+                    </div>
+                    <div className={styles.bottom_logo_container}>
+                        <Image src={bottomLogo} alt="Glorious Diaries Logo" width="100%" height="100%" />
+                    </div>
+                    <div className={styles.right_container}>
+                        <div className={styles.top_line2}></div>
+                        <div className={styles.bottom_line}></div>
+                    </div>
+                </div>
             </div>
-            <div className={homeStyles.side_container}>
+            <div style={{ marginTop: "2vw" }} className={homeStyles.side_container}>
                 <div className={homeStyles.side_gloria}>
                     <div>
                         <Image src={gloriaImage} alt="Photo of me" width="250%" height="250%" />
