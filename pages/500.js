@@ -13,7 +13,7 @@ export default function Page500() {
     )
 }
 
-Page404.getLayout = function PageLayout(page) {
+Page500.getLayout = function PageLayout(page) {
     return (
         <>
             {page}
