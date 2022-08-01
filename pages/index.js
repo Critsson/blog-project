@@ -112,7 +112,7 @@ export default function Home({ posts }) {
             <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
           </div>
           <div className={styles.email_input_container}>
-            <form name="latest_news" method="post" data-netlify="true" action="/about">
+            <form name="latest_news" method="post" data-netlify="true" action="/index">
               <input type="hidden" name="form-name" value="latest_news" />
               <input type="email" placeholder='Your email...' name="email" />
               <button>Let&apos;s go!</button>
