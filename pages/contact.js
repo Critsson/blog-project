@@ -19,28 +19,31 @@ export default function Contact() {
                 Thank you for stopping by! If you would like to get in touch, please email me at QandA@gloriousdiaries.com or text me at +1(###) - ### - #### (message and data rates
                 may apply). Alternatively, please fill out this form:
             </p>
-            <div className={styles.input_container}>
-                <div className={styles.label}>
-                    <p>Name</p>
-                    <p className={styles.asterisk}>*</p>
+            <form name="contact" method="post" data-netlify="true" action="/contact">
+                <input type="hidden" name="form-name" value="contact" />
+                <div className={styles.input_container}>
+                    <div className={styles.label}>
+                        <p>Name</p>
+                        <p className={styles.asterisk}>*</p>
+                    </div>
+                    <input className={styles.text_input} type="text" />
                 </div>
-                <input className={styles.text_input} type="text" />
-            </div>
-            <div className={styles.input_container}>
-                <div className={styles.label}>
-                    <p>Email</p>
-                    <p className={styles.asterisk}>*</p>
+                <div className={styles.input_container}>
+                    <div className={styles.label}>
+                        <p>Email</p>
+                        <p className={styles.asterisk}>*</p>
+                    </div>
+                    <input className={styles.text_input} type="text" />
                 </div>
-                <input className={styles.text_input} type="text" />
-            </div>
-            <div className={styles.textarea_container}>
-                <div className={styles.label}>
-                    <p>Message</p>
-                    <p className={styles.asterisk}>*</p>
+                <div className={styles.textarea_container}>
+                    <div className={styles.label}>
+                        <p>Message</p>
+                        <p className={styles.asterisk}>*</p>
+                    </div>
+                    <textarea className={styles.textarea_input} />
                 </div>
-                <textarea className={styles.textarea_input} />
-            </div>
-            <button className={styles.submit_button}>Submit</button>
+                <button className={styles.submit_button}>Submit</button>
+            </form>
         </div>
     )
 }
