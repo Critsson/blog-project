@@ -26,21 +26,21 @@ export default function Contact() {
                         <p>Name</p>
                         <p className={styles.asterisk}>*</p>
                     </div>
-                    <input className={styles.text_input} type="text" />
+                    <input className={styles.text_input} type="text" name="name" />
                 </div>
                 <div className={styles.input_container}>
                     <div className={styles.label}>
                         <p>Email</p>
                         <p className={styles.asterisk}>*</p>
                     </div>
-                    <input className={styles.text_input} type="text" />
+                    <input className={styles.text_input} type="email" name="email" />
                 </div>
                 <div className={styles.textarea_container}>
                     <div className={styles.label}>
                         <p>Message</p>
                         <p className={styles.asterisk}>*</p>
                     </div>
-                    <textarea className={styles.textarea_input} />
+                    <textarea className={styles.textarea_input} name="description"/>
                 </div>
                 <button className={styles.submit_button}>Submit</button>
             </form>
