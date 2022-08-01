@@ -18,6 +18,10 @@ export default function Home({ posts }) {
   const [postCount, setPostCount] = React.useState(0)
   const parsedPosts = JSON.parse(posts)
 
+  const formSubmit = (e) => {
+    e.preventDefault();
+  }
+
   const increasePreview = () => {
     if (postCount !== 4) {
       setPostCount((prevCount) => {
@@ -108,7 +112,7 @@ export default function Home({ posts }) {
             <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
           </div>
           <div className={styles.email_input_container}>
-            <form name="latest_news" method="POST" data-netlify="true" onSubmit={(e) => e.preventDefault()}>
+            <form name="latest_news" method="POST" onSubmit={(e) => formSubmit(e)} netlify>
               <input type="email" placeholder='Your email...' name="email" />
               <button>Let&apos;s go!</button>
             </form>
