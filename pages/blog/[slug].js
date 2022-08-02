@@ -126,15 +126,18 @@ export default function BlogPage({ data, content, slug }) {
                 <div className={homeStyles.dear_container}>
                     <h2>“Dear Glostar...”</h2>
                     <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-                    <div>
-                        <input className={homeStyles.name_text} type="text" placeholder='Name...' />
-                        <div className={homeStyles.checkbox_container}>
-                            <input className={homeStyles.checkbox} type="checkbox" id="check" />
-                            <label className={homeStyles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
+                    <form name="submissions" method="post" data-netlify="true" action={`/blog/${slug}`}>
+                        <input type="hidden" name="form-name" value="submissions" />
+                        <div>
+                            <input className={homeStyles.name_text} type="text" placeholder='Name...' name="name" />
+                            <div className={homeStyles.checkbox_container}>
+                                <input className={homeStyles.checkbox} type="checkbox" id="check" />
+                                <label className={homeStyles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
+                            </div>
+                            <textarea className={homeStyles.text_area} placeholder='Message...' name="description" />
+                            <button className={homeStyles.text_area_button}>Submit</button>
                         </div>
-                        <textarea className={homeStyles.text_area} placeholder='Message...' />
-                        <button className={homeStyles.text_area_button}>Submit</button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
