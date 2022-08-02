@@ -11,6 +11,20 @@ import Head from "next/head"
 
 export default function About() {
 
+    const [checked, setChecked] = React.useState(false);
+    const [inputValue, setInputValue] = React.useState("");
+
+    const handleCheck = () => {
+        setChecked((prevState) => !prevState)
+        if(checked === false) {
+            setInputValue("");
+        }
+    };
+
+    const handleChange = (e) => {
+        setInputValue(e.target.value)
+    }
+
     return (
         <div>
             <Head>
@@ -74,9 +88,10 @@ export default function About() {
                 <div className={styles.dear_container}>
                     <h2>“Dear Glostar...”</h2>
                     <div>
-                        <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
+                        {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
+                            <input className={styles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
                         <div className={styles.checkbox_container}>
-                            <input className={styles.checkbox} type="checkbox" id="check" />
+                            <input className={styles.checkbox} type="checkbox" id="check" onClick={handleCheck} checked={checked} />
                             <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                         </div>
                         <textarea className={styles.text_area} placeholder='Message...' name="description" />
