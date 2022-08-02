@@ -45,8 +45,6 @@ export default function BlogPage({ data, content, slug }) {
         }
     }
 
-    console.log((marked(content)))
-
     return (
         <>
         <Head>
@@ -132,7 +130,7 @@ export default function BlogPage({ data, content, slug }) {
                     <div className={homeStyles.dear_container}>
                         <h2>“Dear Glostar...”</h2>
                         <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-                        <form name="submissions_post" method="post" data-netlify="true" action={`/blog/${slug}`}>
+                        <form name="submissions_post" method="post" data-netlify="true" action={`/blog/2022-07-28-second-test`}>
                             <input type="hidden" name="form-name" value="submissions_post" />
                             <div>
                                 <input className={homeStyles.name_text} type="text" placeholder='Name...' name="name" />

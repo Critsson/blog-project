@@ -13,7 +13,6 @@ export default function About() {
 
     const [herePressed, setHerePressed] = React.useState(false)
 
-
     return (
         <div>
             <Head>
@@ -79,12 +78,12 @@ export default function About() {
                     <form name="submissions_about" method="post" data-netlify="true" action="/about">
                         <input type="hidden" name="form-name" value="submissions_about" />
                         <div>
-                            <input className={styles.name_text} type="text" placeholder='Name...' name="name"/>
+                            <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
                             <div className={styles.checkbox_container}>
                                 <input className={styles.checkbox} type="checkbox" id="check" />
                                 <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                             </div>
-                            <textarea className={styles.text_area} placeholder='Message...' name="description"/>
+                            <textarea className={styles.text_area} placeholder='Message...' name="description" />
                             <button className={styles.text_area_button}>Submit</button>
                         </div>
                     </form>
