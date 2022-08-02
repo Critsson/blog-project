@@ -11,8 +11,6 @@ import Head from "next/head"
 
 export default function About() {
 
-    const [herePressed, setHerePressed] = React.useState(false)
-
     return (
         <div>
             <Head>
@@ -69,25 +67,22 @@ export default function About() {
             </div>
             <p className={styles.fourth_paragraph}>Additionally, I&apos;ll sometimes talk about what it&apos;s like to be a medical student, my journey, and any tips/advice I may have!</p>
             <div className={styles.last_container}>
-                <p className={styles.fifth_paragraph}>If you have any specific topics or questions you&apos;d like me to answer in a post, make your submission</p>
-                <p onClick={() => setHerePressed(true)} className={styles.here}>here!</p>
+                <p className={styles.fifth_paragraph}>If you have any specific topics or questions you&apos;d like me to answer in a post, make your submission down below!</p>
             </div>
             <form name="submissions_about" method="post" data-netlify="true" action="/about">
-            <input type="hidden" name="form-name" value="submissions_about" />
-                {herePressed &&
-                    <div className={styles.dear_container}>
-                        <h2>“Dear Glostar...”</h2>
-                        <div>
-                            <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
-                            <div className={styles.checkbox_container}>
-                                <input className={styles.checkbox} type="checkbox" id="check" />
-                                <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
-                            </div>
-                            <textarea className={styles.text_area} placeholder='Message...' name="description" />
-                            <button className={styles.text_area_button}>Submit</button>
+                <input type="hidden" name="form-name" value="submissions_about" />
+                <div className={styles.dear_container}>
+                    <h2>“Dear Glostar...”</h2>
+                    <div>
+                        <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
+                        <div className={styles.checkbox_container}>
+                            <input className={styles.checkbox} type="checkbox" id="check" />
+                            <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                         </div>
+                        <textarea className={styles.text_area} placeholder='Message...' name="description" />
+                        <button className={styles.text_area_button}>Submit</button>
                     </div>
-                }
+                </div>
             </form>
         </div >
     )
