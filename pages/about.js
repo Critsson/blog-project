@@ -73,10 +73,10 @@ export default function About() {
                 <p onClick={() => setHerePressed(true)} className={styles.here}>here!</p>
             </div>
             <form name="submissions_about" method="post" data-netlify="true" action="/about">
+            <input type="hidden" name="form-name" value="submissions_about" />
                 {herePressed &&
                     <div className={styles.dear_container}>
                         <h2>“Dear Glostar...”</h2>
-                        <input type="hidden" name="form-name" value="submissions_about" />
                         <div>
                             <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
                             <div className={styles.checkbox_container}>
