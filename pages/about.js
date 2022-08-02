@@ -83,8 +83,8 @@ export default function About() {
             <div className={styles.last_container}>
                 <p className={styles.fifth_paragraph}>If you have any specific topics or questions you&apos;d like me to answer in a post, make your submission down below!</p>
             </div>
-            <form name="submissions_about" method="post" data-netlify="true" action="/about">
-                <input type="hidden" name="form-name" value="submissions_about" />
+            <form name="submissions" method="post" data-netlify="true" action="/about">
+                <input type="hidden" name="form-name" value="submissions" />
                 <div className={styles.dear_container}>
                     <h2>“Dear Glostar...”</h2>
                     <div>

@@ -107,8 +107,8 @@ export default function Medicalschool({postsArr}) {
                     <div className={homeStyles.dear_container}>
                         <h2>“Dear Glostar...”</h2>
                         <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-                        <form name="submissions_medicalschool" method="post" data-netlify="true" action="/blog/medicalschool">
-                            <input type="hidden" name="form-name" value="submissions_medicalschool" />
+                        <form name="submissions" method="post" data-netlify="true" action="/blog/medicalschool">
+                            <input type="hidden" name="form-name" value="submissions" />
                             <div>
                                 {checked === false ? <input onChange={(e) => handleChange(e)} className={homeStyles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
                                     <input className={homeStyles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
