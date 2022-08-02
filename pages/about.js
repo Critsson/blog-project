@@ -91,7 +91,7 @@ export default function About() {
                         {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
                             <input className={styles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
                         <div className={styles.checkbox_container}>
-                            <input className={styles.checkbox} type="checkbox" id="check" onClick={handleCheck} checked={checked} />
+                            <input className={styles.checkbox} type="checkbox" id="check" onChange={handleCheck} checked={checked} />
                             <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                         </div>
                         <textarea className={styles.text_area} placeholder='Message...' name="description" />

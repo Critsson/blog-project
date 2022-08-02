@@ -1,3 +1,4 @@
+import Head from "next/head"
 import homeStyles from "../../styles/Home.module.css"
 import styles from "../../styles/BlogPage.module.css"
 import gloriaImage from "../../public/images/ellipse_gloria.svg"
@@ -9,18 +10,13 @@ import rightArrow from "../../public/images/arrow_right.svg"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import { marked } from "marked"
-import parse from "html-react-parser"
-import bottomLogo from "../../public/images/bottom_logo.png"
-import Head from "next/head"
 
+export default function CreativeWorks({ postsArr }) {
 
-export default function BlogPage({ data, content, slug }) {
-
-    const [postCount, setPostCount] = React.useState(0)
-    const postData = JSON.parse(data)
+    const [postCount, setPostCount] = React.useState(0);
     const [checked, setChecked] = React.useState(false);
     const [inputValue, setInputValue] = React.useState("");
+    const parsedPosts = JSON.parse(postsArr);
 
     const handleCheck = () => {
         setChecked((prevState) => !prevState)
@@ -58,45 +54,55 @@ export default function BlogPage({ data, content, slug }) {
         }
     }
 
+    const parsedPostsArr = parsedPosts.map((post) => {
+
+        let first30 = post.content.split("*").join("").split("#").join("").split(">").join("").split(" ").slice(0, 30).join(" ") + "...";
+
+        return (
+            <div key={post.slug} className={homeStyles.latest_post}>
+                <div className={homeStyles.placeholder_image}>
+                    <Image src={post.data.thumbnail} alt="Post Thumbnail" height="350" width="350" />
+                </div>
+                <div className={homeStyles.post_container}>
+                    <div>
+                        <p>{post.data.date.slice(0, 10)}</p>
+                        <p>|</p>
+                        <p> _ comments</p>
+                    </div>
+                    <h3>{post.data.title}</h3>
+                    <p>{first30}</p>
+                    <Link href={`/blog/${post.slug}`}>
+                        <button>Read more</button>
+                    </Link>
+                </div>
+            </div>
+        )
+    })
+
     return (
-        <>
+        <div>
             <Head>
-                <title>{postData.title + " | " + "Glorious Diaries"}</title>
+                <title>Creative Works</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
+            <div className={homeStyles.email_container}>
+                <div className={homeStyles.email_words_container}>
+                    <h1>K</h1>
+                    <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
+                </div>
+                <div className={homeStyles.email_input_container}>
+                    <form name="latest_news" method="post" data-netlify="true" action="/blog/creativeworks">
+                        <input type="hidden" name="form-name" value="latest_news" />
+                        <input type="email" placeholder='Your email...' name="email" />
+                        <button>Let&apos;s go!</button>
+                    </form>
+                </div>
+            </div>
             <div className={styles.main_container}>
                 <div className={styles.post_container}>
-                    <h1 className={styles.post_title}>{postData.title}</h1>
-                    <div className={styles.post_date_container}>
-                        <h3>By Glostar</h3>
-                        <h3> | </h3>
-                        <h3>{postData.date.slice(0, 10)}</h3>
-                    </div>
-                    <p className={styles.post_description}>{postData.description}</p>
-                    <div className={styles.thumbnail_container}>
-                        <div className={styles.thumbnail}>
-                            <Image src={postData.thumbnail} alt="Post Thumbnail" width="1000" height="700" />
-                        </div>
-                    </div>
-                    <div className={styles.body_container}>
-                        {parse(marked(content))}
-                    </div>
-                    <p className={styles.bol}>Best of luck,</p>
-                    <div className={styles.divider_container}>
-                        <div className={styles.left_container}>
-                            <div className={styles.top_line1}></div>
-                            <div className={styles.bottom_line}></div>
-                        </div>
-                        <div className={styles.bottom_logo_container}>
-                            <Image src={bottomLogo} alt="Glorious Diaries Logo" width="100%" height="100%" />
-                        </div>
-                        <div className={styles.right_container}>
-                            <div className={styles.top_line2}></div>
-                            <div className={styles.bottom_line}></div>
-                        </div>
-                    </div>
+                    {parsedPostsArr}
                 </div>
-                <div style={{ marginTop: "2vw" }} className={homeStyles.side_container}>
+                <div className={homeStyles.side_container}>
                     <div className={homeStyles.side_gloria}>
                         <div>
                             <Image src={gloriaImage} alt="Photo of me" width="250%" height="250%" />
@@ -143,8 +149,8 @@ export default function BlogPage({ data, content, slug }) {
                     <div className={homeStyles.dear_container}>
                         <h2>“Dear Glostar...”</h2>
                         <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-                        <form name="submissions_post" method="post" data-netlify="true" action={`/blog/2022-07-28-second-test`}>
-                            <input type="hidden" name="form-name" value="submissions_post" />
+                        <form name="submissions_creativeworks" method="post" data-netlify="true" action="/blog/creativeworks">
+                            <input type="hidden" name="form-name" value="submissions_creativeworks" />
                             <div>
                                 {checked === false ? <input onChange={(e) => handleChange(e)} className={homeStyles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
                                     <input className={homeStyles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
@@ -159,36 +165,29 @@ export default function BlogPage({ data, content, slug }) {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 
-export function getStaticProps(context) {
+export function getStaticProps() {
 
-    const { params } = context;
-    const markdownData = fs.readFileSync(path.join("posts", params.slug + ".md"), "utf-8")
-    const { data, content } = matter(markdownData)
+    const fileArr = fs.readdirSync(path.join("posts")).reverse();
+    const postsArr = [];
+
+    for (let i = 0; i < fileArr.length; i++) {
+        let markdownData = fs.readFileSync(path.join("posts", fileArr[i]), "utf-8")
+        let { data, content } = matter(markdownData)
+
+        if (data.tags.includes("creativeworks")) {
+            const slug = fileArr[i].replace(".md", "")
+            postsArr.push({ data, content, slug })
+        }
+    }
 
     return {
         props: {
-            data: JSON.stringify(data),
-            content: content,
-            slug: params.slug
+            postsArr: JSON.stringify(postsArr)
         }
     }
-}
 
-export function getStaticPaths() {
-
-    const fileArr = fs.readdirSync(path.join("posts"));
-    const pathsArr = fileArr.map((file) => {
-        return {
-            params: { slug: file.replace(".md", "") }
-        }
-    })
-
-    return {
-        paths: pathsArr,
-        fallback: false
-    }
 }

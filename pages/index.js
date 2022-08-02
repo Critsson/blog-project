@@ -17,9 +17,18 @@ export default function Home({ posts }) {
   const latestPostsArray = [];
   const [postCount, setPostCount] = React.useState(0)
   const parsedPosts = JSON.parse(posts)
+  const [checked, setChecked] = React.useState(false);
+  const [inputValue, setInputValue] = React.useState("");
 
-  const formSubmit = (e) => {
-    e.preventDefault();
+  const handleCheck = () => {
+    setChecked((prevState) => !prevState)
+    if (checked === false) {
+      setInputValue("");
+    }
+  };
+
+  const handleChange = (e) => {
+    setInputValue(e.target.value)
   }
 
   const increasePreview = () => {
@@ -62,7 +71,9 @@ export default function Home({ posts }) {
         </div>
         <h3>{parsedPosts[i].data.title}</h3>
         <p>{first30}</p>
-        <button>Read more</button>
+        <Link href={`/blog/${parsedPosts[i].slug}`}>
+          <button>Read more</button>
+        </Link>
       </div>
     </div>)
   }
@@ -177,12 +188,13 @@ export default function Home({ posts }) {
               <form name="submissions_index" method="post" data-netlify="true" action="/index">
                 <input type="hidden" name="form-name" value="submissions_index" />
                 <div>
-                  <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
+                  {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
+                    <input className={styles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
                   <div className={styles.checkbox_container}>
-                    <input className={styles.checkbox} type="checkbox" id="check" />
+                    <input className={styles.checkbox} type="checkbox" id="check" onChange={handleCheck} checked={checked} />
                     <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                   </div>
-                  <textarea className={styles.text_area} placeholder='Message...' name="description"/>
+                  <textarea className={styles.text_area} placeholder='Message...' name="description" />
                   <button className={styles.text_area_button}>Submit</button>
                 </div>
               </form>

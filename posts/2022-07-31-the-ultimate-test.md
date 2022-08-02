@@ -5,6 +5,7 @@ description: This is a description
 thumbnail: /images/uploads/test.jpg
 tags:
   - post
+  - creativeworks
 ---
 # Testtttt
 
