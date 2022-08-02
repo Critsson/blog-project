@@ -19,7 +19,7 @@ export default function Contact() {
                 Thank you for stopping by! If you would like to get in touch, please email me at QandA@gloriousdiaries.com or text me at +1(###) - ### - #### (message and data rates
                 may apply). Alternatively, please fill out this form:
             </p>
-            <form name="contact" method="post" data-netlify="true" action="/contact">
+            <form name="contact" method="post" data-netlify="true" action="/success">
                 <input type="hidden" name="form-name" value="contact" />
                 <div className={styles.input_container}>
                     <div className={styles.label}>

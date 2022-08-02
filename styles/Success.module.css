@@ -1,0 +1,52 @@
+.main_container {
+    width: 100vw;
+    height: 100vh;
+    background-color:#EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "ABeeZee";
+}
+
+.success_container {
+    border-radius: 50%;
+    width: 25vw;
+    height: 25vw;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon_container {
+    color: #26B887;
+}
+
+.success_container > h1 {
+    font-size: 2.5vw;
+    margin-top: -1.5vw;
+}
+
+.thanks {
+    margin-top: -1.5vw;
+}
+
+.return_home {
+    margin-top: 0vw;
+    background-color: #26B887;
+    border-color: transparent;
+    color: white;
+    font-family: "ABeeZee";
+    border-radius: .2vw;
+    width: 10vw;
+    height: 3vw;
+    font-size: 1.7vw;
+    margin-top: 1.5vw;
+    margin-bottom: 2.5vw;
+}
+
+.return_home:hover {
+    cursor: pointer;
+}

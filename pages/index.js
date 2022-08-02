@@ -123,7 +123,7 @@ export default function Home({ posts }) {
             <h3>EEP UP WITH YOUR FAVOURITE CATEGORIES AND THE LATEST NEWS!</h3>
           </div>
           <div className={styles.email_input_container}>
-            <form name="latest_news" method="post" data-netlify="true" action="/index">
+            <form name="latest_news" method="post" data-netlify="true" action="/success">
               <input type="hidden" name="form-name" value="latest_news" />
               <input type="email" placeholder='Your email...' name="email" />
               <button>Let&apos;s go!</button>
@@ -185,7 +185,7 @@ export default function Home({ posts }) {
             <div className={styles.dear_container}>
               <h2>“Dear Glostar...”</h2>
               <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-              <form name="submissions" method="post" data-netlify="true" action="/index">
+              <form name="submissions" method="post" data-netlify="true" action="/success">
                 <input type="hidden" name="form-name" value="submissions" />
                 <div>
                   {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
