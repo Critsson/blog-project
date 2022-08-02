@@ -2,9 +2,9 @@ import styles from "../styles/Success.module.css"
 import Link from "next/link"
 import DoneRoundedIcon from '@mui/icons-material/DoneRounded';
 
-export default function Success({url}) {
+export default function Success() {
 
-    const route = url.replace("https://main--chic-sprinkles-1cb352.netlify.app", "")
+    // const route = url.replace("https://main--chic-sprinkles-1cb352.netlify.app", "")
 
     return (
         <div className={styles.main_container}>
@@ -16,7 +16,7 @@ export default function Success({url}) {
                 <p className={styles.thanks}>
                     Thank you for your submission
                 </p>
-                <Link href={route}>
+                <Link href="/">
                     <button className={styles.return_home}>
                         Continue
                     </button>
@@ -26,14 +26,14 @@ export default function Success({url}) {
     )
 }
 
-export function getServerSideProps(context) {
+// export function getServerSideProps(context) {
 
-    return {
-        props: {
-            url: context.req.headers.referer
-        }
-    }
-}
+//     return {
+//         props: {
+//             url: context.req.headers.referer
+//         }
+//     }
+// }
 
 Success.getLayout = function PageLayout(page) {
     return (
