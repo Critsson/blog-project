@@ -76,15 +76,18 @@ export default function About() {
             {herePressed &&
                 <div className={styles.dear_container}>
                     <h2>“Dear Glostar...”</h2>
-                    <div>
-                        <input className={styles.name_text} type="text" placeholder='Name...' />
-                        <div className={styles.checkbox_container}>
-                            <input className={styles.checkbox} type="checkbox" id="check" />
-                            <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
+                    <form name="submissions_about" method="post" data-netlify="true" action="/about">
+                        <input type="hidden" name="form-name" value="submissions_about" />
+                        <div>
+                            <input className={styles.name_text} type="text" placeholder='Name...' name="name"/>
+                            <div className={styles.checkbox_container}>
+                                <input className={styles.checkbox} type="checkbox" id="check" />
+                                <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
+                            </div>
+                            <textarea className={styles.text_area} placeholder='Message...' name="description"/>
+                            <button className={styles.text_area_button}>Submit</button>
                         </div>
-                        <textarea className={styles.text_area} placeholder='Message...' />
-                        <button className={styles.text_area_button}>Submit</button>
-                    </div>
+                    </form>
                 </div>
             }
         </div>

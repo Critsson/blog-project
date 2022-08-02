@@ -174,8 +174,8 @@ export default function Home({ posts }) {
             <div className={styles.dear_container}>
               <h2>“Dear Glostar...”</h2>
               <p>Have a topic or question you&apos;d like me to post about? Send a submission below!</p>
-              <form name="submissions" method="post" data-netlify="true" action="/index">
-                <input type="hidden" name="form-name" value="submissions" />
+              <form name="submissions_index" method="post" data-netlify="true" action="/index">
+                <input type="hidden" name="form-name" value="submissions_index" />
                 <div>
                   <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
                   <div className={styles.checkbox_container}>
