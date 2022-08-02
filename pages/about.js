@@ -72,10 +72,10 @@ export default function About() {
                 <p className={styles.fifth_paragraph}>If you have any specific topics or questions you&apos;d like me to answer in a post, make your submission</p>
                 <p onClick={() => setHerePressed(true)} className={styles.here}>here!</p>
             </div>
-            {herePressed &&
-                <div className={styles.dear_container}>
-                    <h2>“Dear Glostar...”</h2>
-                    <form name="submissions_about" method="post" data-netlify="true" action="/about">
+            <form name="submissions_about" method="post" data-netlify="true" action="/about">
+                {herePressed &&
+                    <div className={styles.dear_container}>
+                        <h2>“Dear Glostar...”</h2>
                         <input type="hidden" name="form-name" value="submissions_about" />
                         <div>
                             <input className={styles.name_text} type="text" placeholder='Name...' name="name" />
@@ -86,9 +86,9 @@ export default function About() {
                             <textarea className={styles.text_area} placeholder='Message...' name="description" />
                             <button className={styles.text_area_button}>Submit</button>
                         </div>
-                    </form>
-                </div>
-            }
-        </div>
+                    </div>
+                }
+            </form>
+        </div >
     )
 }

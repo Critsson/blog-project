@@ -237,7 +237,7 @@
     margin-left: 8vw;
   }
   
-  .dear_container > form > div {
+  .dear_container > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
