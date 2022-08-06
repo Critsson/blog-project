@@ -11,14 +11,14 @@ import rightArrow from "../../public/images/arrow_right.svg"
 import fs from "fs"
 import path from "path"
 import matter from "gray-matter"
-import creativeworks from "../../public/images/creativeworks.png"
+import blog from "../../public/images/blog.png"
 
-export default function CreativeWorks({ postsArr }) {
+export default function BlogIndex({ postsArr }) {
 
+    const parsedPosts = JSON.parse(postsArr)
     const [postCount, setPostCount] = React.useState(0);
     const [checked, setChecked] = React.useState(false);
     const [inputValue, setInputValue] = React.useState("");
-    const parsedPosts = JSON.parse(postsArr);
     const [page, setPage] = React.useState(0);
 
     const handleCheck = () => {
@@ -93,12 +93,12 @@ export default function CreativeWorks({ postsArr }) {
     return (
         <div>
             <Head>
-                <title>Creative Works</title>
+                <title>Blog</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             </Head>
             <div className={aboutStyles.header}>
                 <div className={aboutStyles.about_container}>
-                    <Image src={creativeworks} alt="About Page" width="500" height="98.8" />
+                    <Image src={blog} alt="About Page" width="170" height="100" />
                 </div>
             </div>
             <div className={homeStyles.email_container}>
@@ -198,11 +198,8 @@ export function getStaticProps() {
     for (let i = 0; i < fileArr.length; i++) {
         let markdownData = fs.readFileSync(path.join("posts", fileArr[i]), "utf-8")
         let { data, content } = matter(markdownData)
-
-        if (data.tags.includes("creativeworks")) {
-            const slug = fileArr[i].replace(".md", "")
-            postsArr.push({ data, content, slug })
-        }
+        const slug = fileArr[i].replace(".md", "")
+        postsArr.push({ data, content, slug })
     }
 
     while (postsArr.length > 0) {

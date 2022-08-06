@@ -6,6 +6,7 @@ thumbnail: /images/uploads/test.jpg
 tags:
   - post
   - creativeworks
+  - medicalschool
 ---
 # Testtttt
 

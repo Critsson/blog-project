@@ -88,13 +88,13 @@ export default function About() {
                 <div className={styles.dear_container}>
                     <h2>“Dear Glostar...”</h2>
                     <div>
-                        {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} /> :
+                        {checked === false ? <input onChange={(e) => handleChange(e)} className={styles.name_text} type="text" placeholder='Name...' name="name" value={inputValue} required/> :
                             <input className={styles.name_text} type="text" placeholder='Name...' name="name" value="Anonymous" disabled="disabled" />}
                         <div className={styles.checkbox_container}>
                             <input className={styles.checkbox} type="checkbox" id="check" onChange={handleCheck} checked={checked} />
                             <label className={styles.checkbox_label} htmlFor="check">Check to remain anonymous</label>
                         </div>
-                        <textarea className={styles.text_area} placeholder='Message...' name="description" />
+                        <textarea className={styles.text_area} placeholder='Message...' name="description" required/>
                         <button className={styles.text_area_button}>Submit</button>
                     </div>
                 </div>

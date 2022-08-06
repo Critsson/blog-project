@@ -132,3 +132,34 @@
     width: 2.5vw;
     height: 2.5vw;
 }
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Alegreya SC";
+    gap: 1vw;
+}
+
+.page_word {
+    color: #F6A01E;
+    font-size: 1.8vw;
+}
+
+.page_word:hover {
+    cursor:default;
+}
+
+.page_number {
+    color: #F6A01E;
+    font-size: 1.8vw;
+}
+
+.page_number_selected {
+    color: #8D68AE;
+    font-size: 1.8vw;
+}
+
+.page_number:hover, .page_number_selected:hover {
+    cursor: pointer;
+}
