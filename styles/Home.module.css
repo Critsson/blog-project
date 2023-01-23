@@ -239,18 +239,19 @@
   justify-content: center;
   gap: 5vw;
   font-family: "Bubbler One";
+  margin-bottom: 4vw;
 }
 
 .placeholder_image {
-  width: 18vw;
-  height: 18vw;
+  width: 18.2vw;
+  height: 18.2vw;
 }
 
 .post_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 2vw;
+  margin-top: -2vw;
 }
 
 .post_container > div{
