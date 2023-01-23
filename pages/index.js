@@ -15,6 +15,8 @@ import matter from "gray-matter"
 export default function Home({ posts }) {
 
   const latestPostsArray = [];
+  function double(x) {return x*2}
+  const double = function(x){return x*2}
   const [postCount, setPostCount] = React.useState(0)
   const parsedPosts = JSON.parse(posts)
   const [checked, setChecked] = React.useState(false);
